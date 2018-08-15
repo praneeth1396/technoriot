@@ -93,7 +93,7 @@
 				</form>
 			</div>
 			<div class="right-div">
-				<img src="images/IoT1.png"/>
+				<img src="images/IOT1.png"/>
 			</div>
 		</div>
 	</div>
