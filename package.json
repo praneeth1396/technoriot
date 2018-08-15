@@ -1,7 +1,10 @@
 {
-    "name": "Login_v8",
+    "name": "my-static-site",
     "version": "1.0.0",
-    "description": "A Harp App on Heroku",
+    "description": "This will load any static html site",
+    "scripts": {
+      "start": "harp server --port $PORT"
+    },
     "dependencies": {
       "harp": "*"
     }
