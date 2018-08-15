@@ -1,0 +1,129 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body {
+    font-family: "courier";
+    height: 100%;
+    width: 100%;
+    background: url("../images/sky.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#header{
+    margin-bottom:0px;
+    height: 180px;
+    background: none;
+    border-bottom: 5px ridge goldenrod;
+    padding-top: 0px;
+}
+.heading{
+    text-align: center;
+}
+.heading h2{
+	font-size: 40px;
+    text-align:center;
+    color: gold;
+    font-weight: bold;
+    vertical-align: middle;
+    display: inline-block;
+}
+.heading img{
+    max-width: 200px;
+    max-height: 180px;
+    width: auto;
+    height: auto;
+}
+.sidenav {
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    overflow-x: hidden;
+	padding-top:20px;
+}
+
+.sidenav a {
+    padding: 12px 18px 18px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: gold;
+    display: block;
+    font-family : "Parkavenue, cursive";
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.sidenav a:hover {
+    background-color: gray;
+}
+.main {
+    margin-left: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    height: calc(100% - 180px);    
+    width: calc(100% - 170px);    
+    padding: 8px 80px 8px 8px;  
+    border-image: url("../images/border.png");
+    border-image-slice:110 100 110 100 fill; 
+    border-image-width: 35px 35px 35px 35px; 
+    border-image-outset: 0px 0px 0px 0px;
+    border-image-repeat: stretch stretch; 
+    border-top-width: 20px;
+    border-bottom-width: 5px;
+    border-left-width: 120px;
+    border-right-width: 120px;
+    border-style: solid;
+    display: block;
+    overflow: auto;
+        
+}
+.main div{
+    display:none;
+    height: 100%;
+    width: 100%;
+}
+.main div p{
+    font-weight: bold;
+    font-size: 17px;
+    color: white;
+    text-align: left;
+}
+.reg_btn{
+    display: block;
+    margin: 0 auto;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    background-color: #538fbe;
+    padding: 20px 70px;
+    font-size: 14px;
+    border: 1px solid #2d6898;
+    background-image: linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    background-image: -o-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    background-image: -moz-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    background-image: -webkit-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+    background-image: -ms-linear-gradient(bottom, rgb(73,132,180) 0%, rgb(97,155,203) 100%);
+ 
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-shadow: 0px -1px 0px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    -moz-box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+    box-shadow: 0px 6px 0px #2b638f, 0px 3px 15px rgba(0,0,0,.4), inset 0px 1px 0px rgba(255,255,255,.3), inset 0px 0px 3px rgba(255,255,255,.5);
+}
+.reg_btn a{
+    text-decoration: none;
+    color:#fff;
+}
+.reg_btn a:hover{
+    text-decoration: none;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top:15px;}
+  .sidenav a {font-size: 8px;}
+}
