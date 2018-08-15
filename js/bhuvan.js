@@ -14,18 +14,18 @@ function check()
     if (cognitoUser != null) {
         cognitoUser.getSession(function(err, session) {
             if (err) {
-               alert(err);
+                //alert(err);
                 return;
             }
             console.log('session validity: ' + session.isValid());
             cognitoUser.getUserAttributes(function(err, result) {
                 if (err) {
-                    alert(err);
+                    //alert(err);
                     return;
                 }
                 else
                 {
-                    alert(result);
+                    //alert(result);
                 }
                 for (i = 0; i < result.length; i++) {
                     console.log('attribute ' + result[i].getName() + ' has value ' + result[i].getValue());
@@ -100,17 +100,17 @@ function authorize(emailList,passList){
                         if (cognitoUser != null) {
                             cognitoUser.getSession(function(err, session) {
                                 if (err) {
-                                    alert(err);
+                                    //alert(err);
                                     reject(err);
                                 }
                                 console.log('session validity: ' + session.isValid());
                                 cognitoUser.getUserAttributes(function(err, result) {
                                     if (err) {
-                                        alert(err);
+                                        //alert(err);
                                         reject(err);
                                     }
                                     else{
-                                        alert(result);
+                                        //alert(result);
                                         resolve(result);         
                                     }
                                 });
@@ -143,7 +143,7 @@ function authorize(emailList,passList){
                     },
 
                     onFailure: function(err) {
-                        alert(err.message || JSON.stringify(err));
+                        //alert(err.message || JSON.stringify(err));
                         reject(err);
                     },
                 });
@@ -179,7 +179,7 @@ function authorize(emailList,passList){
           console.log('CodeDeliveryData from forgotPassword: ' + data);
     },
     onFailure: function(err) {
-        alert(err.message || JSON.stringify(err));
+        //alert(err.message || JSON.stringify(err));
     },
     //Optional automatic callback
     inputVerificationCode: function(data) {
