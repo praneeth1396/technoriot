@@ -266,6 +266,7 @@ function authorize(emailList,passList){
             }); */
             authorize(emailList,passList).then(function(result){
                 console.log(result);  
+                debug;
                 window.location.href = "description_page.html";
             },function(err){
                 console.log(err);
