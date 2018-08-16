@@ -247,7 +247,6 @@ function authorize(emailList,passList){
             
             authorize(emailList,passList).then(function(result){
                 console.log(result);  
-                debugger;
                 $.ajax({
                     url: "http://localhost:3000/send_params",
                     type: "POST",
