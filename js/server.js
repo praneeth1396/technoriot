@@ -12,6 +12,7 @@ app.use(function(req, res, next) {
 
 const { Client } = require('pg');
 
+var port = process.env.PORT || 8080;
 
 app.post('/send_params', function(req, res) {
     console.log(req.body.finalResult);    
@@ -43,4 +44,6 @@ app.post('/send_params', function(req, res) {
     //check credentials with db here
 });
 
-app.listen(3000);
+app.listen(port, function() {
+    console.log('Our app is running on ' + port);
+});
