@@ -248,7 +248,7 @@ function authorize(emailList,passList){
             authorize(emailList,passList).then(function(result){
                 console.log(result);  
                 $.ajax({
-                    url: "http://localhost:3000/send_params",
+                    url: "https://techno-riot.herokuapp.com/send_params",
                     type: "POST",
                     dataType: "json",   
                     crossDomain: true,
