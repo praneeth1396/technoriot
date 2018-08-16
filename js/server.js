@@ -15,7 +15,7 @@ const { Client } = require('pg');
 var port = process.env.PORT || 8080;
 
 app.get('/',function(req,res){
-    console.log(__dirname);
+    res.sendFile(path.join(__dirname + "/../index.php"));
 });
 
 app.post('/send_params', function(req, res) {
