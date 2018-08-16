@@ -244,30 +244,30 @@ function authorize(emailList,passList){
         if (currentTab >= x.length) {
             console.log(emailList);
             console.log(passList);
-            /* $.ajax({
-                url: "http://localhost:3000/send_params",
-                type: "POST",
-                dataType: "json",   
-                crossDomain: true,
-                data: JSON.stringify({
-                    "id": idList,
-                    "pass": passList,
-                    "email": emailList
-                }),
-                contentType: 'application/json',
-                success:function(data){
-                    // depends on response received from server whether the credentials were valid or not , if so hiding the elements        
-                    hideAllElements();
-                    console.log("Success");
-                },
-                error:function(){
-                    console.log("Error");
-                }
-            }); */
+            
             authorize(emailList,passList).then(function(result){
                 console.log(result);  
-                debug;
-                window.location.href = "description_page.html";
+                debugger;
+                $.ajax({
+                    url: "http://localhost:3000/send_params",
+                    type: "POST",
+                    dataType: "json",   
+                    crossDomain: true,
+                    data: JSON.stringify({
+                        "finalResult":result
+                    }),
+                    contentType: 'application/json',
+                    success:function(data){
+                        // depends on response received from server whether the credentials were valid or not , if so hiding the elements        
+                        hideAllElements();
+                        console.log("Success");
+                        window.location.href = "description_page.html";
+                    },
+                    error:function(){
+                        console.log("Error");
+                    }
+                });
+
             },function(err){
                 console.log(err);
                 window.location.href = "index.html";

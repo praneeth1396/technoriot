@@ -11,10 +11,7 @@ app.use(function(req, res, next) {
 });
 
 app.post('/send_params', function(req, res) {
-    console.log(req.body.id)
-    console.log(req.body.pass);
-    console.log(req.body.email);
-
+    console.log(req.body.finalResult);
     //check credentials with db here
 });
 
