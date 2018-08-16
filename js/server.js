@@ -74,7 +74,7 @@ app.post('/send_params', function(req, res) {
             }
             else{
                 client.end();                
-                continue;
+                break;
             }
             client.end();
         });
