@@ -26,10 +26,7 @@ const { Client } = require('pg');
 
 var port = process.env.PORT || 8080;
 
-app.use(express.static(path.join(__dirname,"/../css")));
-app.use(express.static(path.join(__dirname,"/../js")));
-app.use(express.static(path.join(__dirname,"/../fonts")));
-app.use(express.static(path.join(__dirname,"/../images")));
+app.use(express.static(path.join(__dirname,"/..")));
 
 app.all('/',function(req,res){
     res.render(path.join(__dirname ,"/../index.php"));
