@@ -30,7 +30,7 @@ app.post('/send_params', function(req, res) {
     var users = req.body.finalResult;
     var index = 0;
     var req_fields = {gender:3,college_code:6,college_name:7,name:8,phone_number:9,email:10};
-    for(index;index<results.length;index++){
+    for(index;index<users.length;index++){
         var user = results[index];
         var full_name = user[name].Value;
         var email = user[email].Value;

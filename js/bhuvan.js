@@ -262,8 +262,8 @@ function authorize(emailList,passList){
                         console.log("Success");
                         window.location.href = "description_page.html";
                     },
-                    error:function(){
-                        console.log("Error");
+                    error:function(err){
+                        console.log(err);
                     }
                 });
 
