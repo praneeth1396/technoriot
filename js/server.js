@@ -42,12 +42,15 @@ app.post('/send_params', function(req, res) {
     client.connect()
         .then(() => client.query('SELECT user_id from users order by user_id desc limit 1'))
             .then((result) => {
-                console.log(result);
+                if(result.rowCount == 0)
+                    user_id = 1;
+                else
+                    user_id = result.rows[0] + 1;
             })
         .catch(() => {
              client.end();
         });
-    //console.log(user_id);
+    console.log(user_id);
     var users = req.body.finalResult;
     var index = 0;
     var req_fields = {gender:3,college_code:6,college_name:7,name:8,phone_number:9,email:10};
