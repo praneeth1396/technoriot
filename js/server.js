@@ -37,21 +37,17 @@ app.post('/send_params', function(req, res) {
     const client = new Client({
         connectionString: process.env.DATABASE_URL,
         ssl: true,
-    });
-    client.connect();
+    });    
     var user_id;
-    client.query("SELECT max(user_id) from users;", (err, res) => {
-        if (err) throw err; 
-        if(res.rows.length == 0)
-            user_id = 1;
-        else
-            user_id = res.rows[res.rows.length - 1] + 2;
-        for (let row of res.rows) {
-          console.log(JSON.stringify(row));
-        }
-        client.end();
-    });
-    console.log(user_id);
+    client.connect()
+        .then(() => client.query('SELECT max(user_id) from users'))
+            .then((result) => {
+                console.log(result);
+            })
+        .catch(() => {
+             client.end();
+        });
+    //console.log(user_id);
     var users = req.body.finalResult;
     var index = 0;
     var req_fields = {gender:3,college_code:6,college_name:7,name:8,phone_number:9,email:10};
@@ -63,8 +59,8 @@ app.post('/send_params', function(req, res) {
         var gender = user[req_fields.gender].Value;
         var college_name = user[req_fields.college_name].Value;
         var college_code = user[req_fields.college_code].Value;
-        console.log(full_name + " " + email + " " + email + " " + phone_number + " " + gender + " " + college_name + " " + college_code);    
-        client.connect();
+        console.log(full_name + " " + email + " " + phone_number + " " + gender + " " + college_name + " " + college_code);    
+        /* client.connect();
         client.query("SELECT user_id from users where email="+email+";", (err, res) => {
             if (err) throw err;
             if(res.rows.length == 0){
@@ -73,7 +69,7 @@ app.post('/send_params', function(req, res) {
                 });
             }
             client.end();
-        });
+        }); */
     }
 
 });
