@@ -3,6 +3,15 @@ var bodyParser = require('body-parser');
 var app = express();
 var router = express.Router();
 
+var phpExpress = require('php-express')({
+    binPath: '.heroku/php/bin/php'
+});
+
+
+app.set('views', __dirname);
+app.engine('php', phpExpress.engine);
+app.set('view engine', 'php');
+
 app.use(bodyParser.json());
 
 app.use(function(req, res, next) {
@@ -17,7 +26,7 @@ const { Client } = require('pg');
 
 var port = process.env.PORT || 8080;
 
-app.get('/',function(req,res){
+app.all('/',function(req,res){
     res.render(path.join(__dirname + "/../index.php"));
 });
 
