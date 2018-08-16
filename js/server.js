@@ -72,10 +72,6 @@ app.post('/send_params', function(req, res) {
                     if(err) throw err;
                 });
             }
-            else{
-                client.end();                
-                break;
-            }
             client.end();
         });
     }
