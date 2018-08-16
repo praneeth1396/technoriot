@@ -39,27 +39,47 @@ app.post('/send_params', function(req, res) {
         ssl: true,
     });
     client.connect();
-    client.query("SELECT user_id from users;", (err, res) => {
-        if (err) console.log(err);
+    var user_id;
+    client.query("SELECT max(user_id) from users;", (err, res) => {
+        if (err) throw err; 
+        if(res.rows.length == 0)
+            user_id = 1;
+        else
+            user_id = res.rows[res.rows.length - 1] + 2;
         for (let row of res.rows) {
           console.log(JSON.stringify(row));
         }
         client.end();
     });
+    console.log(user_id);
     var users = req.body.finalResult;
     var index = 0;
     var req_fields = {gender:3,college_code:6,college_name:7,name:8,phone_number:9,email:10};
     for(index;index<users.length;index++){
         var user = users[index];
-        var full_name = user[name].Value;
-        var email = user[email].Value;
-        var phone_number = user[phone_number].Value;
-        var gender = user[gender].Value;
-        var college_name = user[college_name].Value;
-        var college_code = user[college_code].Value;
-        console.log(full_name + " " + email + " " + email + " " + phone_number + " " + gender + " " + college_name + " " + college_code);
+        var full_name = user[req_fields.name].Value;
+        var email = user[req_fields.email].Value;
+        var phone_number = user[req_fields.phone_number].Value;
+        var gender = user[req_fields.gender].Value;
+        var college_name = user[req_fields.college_name].Value;
+        var college_code = user[req_fields.college_code].Value;
+        console.log(full_name + " " + email + " " + email + " " + phone_number + " " + gender + " " + college_name + " " + college_code);    
+        client.connect();
+        client.query("SELECT user_id from users where email="+email+";", (err, res) => {
+            if (err) throw err;
+            if(res.rows.length == 0){
+                client.query("INSERT INTO users (user_id,full_name,email,phone_number,gender,college_name,college_code) values("+user_id+","+full_name+","+email+","+phone_number+","+gender+","+college_name+","+college_code+");",(err,res)=>{
+                    if(err) throw err;
+                });
+            }
+            else{
+                client.end();                
+                continue;
+            }
+            client.end();
+        });
     }
-    //check credentials with db here
+
 });
 
 app.listen(port, function() {
