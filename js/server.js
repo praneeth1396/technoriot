@@ -42,6 +42,7 @@ app.post('/send_params', function(req, res) {
     client.connect()
         .then(() => client.query('SELECT user_id from users order by user_id desc limit 1'))
             .then((result) => {
+                console.log(result.rowCount);
                 if(result.rowCount == 0)
                     user_id = 1;
                 else
