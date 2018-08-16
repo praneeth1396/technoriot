@@ -60,7 +60,7 @@ app.post('/send_params', function(req, res) {
                         client.query("SELECT user_id from users where email="+email)
                             .then((result) => {
                                 if(result.rowCount > 0){
-                                    res.end("Error !");
+                                    console.log("Error");
                                 }
                                 else{
                                     client.query("INSERT INTO users(user_id,full_name,email,phone_number,gender,college_name,college_code) values("+user_id+","+full_name+","+email+","+phone_number+","+gender+","+college_name+","+college_code+")")
