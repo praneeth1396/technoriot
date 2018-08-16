@@ -43,38 +43,46 @@ app.post('/send_params', function(req, res) {
         .then(() => client.query('SELECT user_id from users order by user_id desc limit 1'))
             .then((result) => {
                 console.log(result.rowCount);
-                if(result.rowCount == 0)
-                    user_id = 1;
+                if(result.rowCount == 0){
+                    user_id = 1;          
+                    var users = req.body.finalResult;
+                    var index = 0;
+                    var req_fields = {gender:3,college_code:6,college_name:7,name:8,phone_number:9,email:10};
+                    for(index;index<users.length;index++){
+                        var user = users[index];
+                        var full_name = user[req_fields.name].Value;
+                        var email = user[req_fields.email].Value;
+                        var phone_number = user[req_fields.phone_number].Value;
+                        var gender = user[req_fields.gender].Value;
+                        var college_name = user[req_fields.college_name].Value;
+                        var college_code = user[req_fields.college_code].Value;
+                        console.log(full_name + " " + email + " " + phone_number + " " + gender + " " + college_name + " " + college_code);    
+                        client.query("SELECT user_id from users where email="+email)
+                            .then((result) => {
+                                if(result.rowCount > 0){
+                                    res.end("Error !");
+                                }
+                                else{
+                                    client.query("INSERT INTO users(user_id,full_name,email,phone_number,gender,college_name,college_code) values("+user_id+","+full_name+","+email+","+phone_number+","+gender+","+college_name+","+college_code+")")
+                                        .then((result) => {
+                                            console.log("Successfully inserted !");
+                                        })
+                                        .catch(() => {
+                                            client.end();
+                                        });
+                                }
+                            })
+                        .catch(() => {                            
+                            client.end();
+                        });    
+                    }
+                }
                 else
                     user_id = result.rows[0] + 1;
             })
         .catch(() => {
              client.end();
         });
-    console.log(user_id);
-    var users = req.body.finalResult;
-    var index = 0;
-    var req_fields = {gender:3,college_code:6,college_name:7,name:8,phone_number:9,email:10};
-    for(index;index<users.length;index++){
-        var user = users[index];
-        var full_name = user[req_fields.name].Value;
-        var email = user[req_fields.email].Value;
-        var phone_number = user[req_fields.phone_number].Value;
-        var gender = user[req_fields.gender].Value;
-        var college_name = user[req_fields.college_name].Value;
-        var college_code = user[req_fields.college_code].Value;
-        console.log(full_name + " " + email + " " + phone_number + " " + gender + " " + college_name + " " + college_code);    
-        /* client.connect();
-        client.query("SELECT user_id from users where email="+email+";", (err, res) => {
-            if (err) throw err;
-            if(res.rows.length == 0){
-                client.query("INSERT INTO users (user_id,full_name,email,phone_number,gender,college_name,college_code) values("+user_id+","+full_name+","+email+","+phone_number+","+gender+","+college_name+","+college_code+");",(err,res)=>{
-                    if(err) throw err;
-                });
-            }
-            client.end();
-        }); */
-    }
     res.end("Success");
 });
 

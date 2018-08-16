@@ -258,7 +258,7 @@ function authorize(emailList,passList){
                     contentType: 'application/json',
                     success:function(data){      
                         hideAllElements();
-                        console.log("Success");
+                        console.log(data);
                         window.location.href = "description_page.html";
                     },
                     error:function(err){
