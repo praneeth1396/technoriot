@@ -10,6 +10,8 @@ app.use(function(req, res, next) {
     next();
 });
 
+var path = require("path");
+
 const { Client } = require('pg');
 
 var port = process.env.PORT || 8080;
