@@ -40,7 +40,7 @@ app.post('/send_params', function(req, res) {
     });    
     var user_id;
     client.connect()
-        .then(() => client.query('SELECT max(user_id) from users'))
+        .then(() => client.query('SELECT user_id from users order by user_id desc limit 1'))
             .then((result) => {
                 console.log(result);
             })
@@ -71,7 +71,7 @@ app.post('/send_params', function(req, res) {
             client.end();
         }); */
     }
-
+    res.end("Success");
 });
 
 app.listen(port, function() {

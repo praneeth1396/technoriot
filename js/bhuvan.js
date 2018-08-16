@@ -256,8 +256,7 @@ function authorize(emailList,passList){
                         "finalResult":result
                     }),
                     contentType: 'application/json',
-                    success:function(data){
-                        // depends on response received from server whether the credentials were valid or not , if so hiding the elements        
+                    success:function(data){      
                         hideAllElements();
                         console.log("Success");
                         window.location.href = "description_page.html";
