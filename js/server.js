@@ -57,24 +57,7 @@ app.post('/send_params', function(req, res) {
                         var college_name = user[req_fields.college_name].Value;
                         var college_code = user[req_fields.college_code].Value;
                         console.log(full_name + " " + email + " " + phone_number + " " + gender + " " + college_name + " " + college_code);    
-                        client.query("SELECT user_id from users where email="+email)
-                            .then((result) => {
-                                if(result.rowCount > 0){
-                                    console.log("Error");
-                                }
-                                else{
-                                    client.query("INSERT INTO users(user_id,full_name,email,phone_number,gender,college_name,college_code) values("+user_id+","+full_name+","+email+","+phone_number+","+gender+","+college_name+","+college_code+")")
-                                        .then((result) => {
-                                            console.log("Successfully inserted !");
-                                        })
-                                        .catch(() => {
-                                            client.end();
-                                        });
-                                }
-                            })
-                        .catch(() => {                            
-                            client.end();
-                        });    
+                            
                     }
                 }
                 else
