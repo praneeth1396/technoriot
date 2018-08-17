@@ -49,33 +49,40 @@ app.post('/send_params', function(req, res) {
                     user_id = result.rows[0] + 1;
                 console.log("USER ID "+user_id);    
                 var users = req.body.finalResult;
-                var index = 0;
                 var req_fields = {gender:3,college_code:6,college_name:7,name:8,phone_number:9,email:10};
-                while(index<users.length){
-                    var user = users[index];
-                    var full_name = user[req_fields.name].Value;
-                    var email = user[req_fields.email].Value;
-                    var phone_number = user[req_fields.phone_number].Value;
-                    var gender = user[req_fields.gender].Value;
-                    var college_name = user[req_fields.college_name].Value;
-                    var college_code = user[req_fields.college_code].Value;
-                    console.log(full_name + " " + email + " " + phone_number + " " + gender + " " + college_name + " " + college_code);    
-                    client.query("SELECT user_id from users where email = $1",[email])
-                    .then(result => {
-                        console.log("SECOND SELECT" +result.rowCount)
-                        if(result.rowCount == 0){
-                            client.query("INSERT INTO users(user_id,full_name,email,phone_number,gender,college_name,college_code) values($1,$2,$3,$4,$5,$6,$7)",[user_id,full_name,email,phone_number,gender,college_name,college_code])
-                            .then(result => {
-                                console.log("INSERT "+result.rowCount);
-                                user_id = user_id + 1;
-                                index = index + 1;
-                                console.log("values " + user_id + " " + index);
-                            })
-                            .catch(e => console.error(e.stack))
-                        }
-                    })
-                    .catch(e => console.error(e.stack))   
-                }
+                var user1 = users[0];
+                var full_name1 = user1[req_fields.name].Value;
+                var email1 = user1[req_fields.email].Value;
+                var phone_number1 = user1[req_fields.phone_number].Value;
+                var gender1 = user1[req_fields.gender].Value;
+                var college_name1 = user1[req_fields.college_name].Value;
+                var college_code1 = user1[req_fields.college_code].Value;
+
+                var user2 = users[1];
+                var full_name2 = user2[req_fields.name].Value;
+                var email2 = user2[req_fields.email].Value;
+                var phone_number2 = user2[req_fields.phone_number].Value;
+                var gender2 = user2[req_fields.gender].Value;
+                var college_name2 = user2[req_fields.college_name].Value;
+                var college_code2 = user2[req_fields.college_code].Value;
+
+                console.log(full_name1 + " " + email1 + " " + phone_number1 + " " + gender1 + " " + college_name1 + " " + college_code1);    
+                console.log(full_name2 + " " + email2 + " " + phone_number2 + " " + gender2 + " " + college_name2 + " " + college_code2);    
+                
+                client.query("SELECT user_id from users where email = $1",[email])
+                .then(result => {
+                    console.log("SECOND SELECT" +result.rowCount)
+                    if(result.rowCount == 0){
+                        client.query("INSERT INTO users(user_id,full_name,email,phone_number,gender,college_name,college_code) values($1,$2,$3,$4,$5,$6,$7),($8,$9,$10,$11,$12,$13,$14)",[user_id,full_name1,email1,phone_number1,gender1,college_name1,college_code1,user_id+1,full_name2,email2,phone_number2,gender2,college_name2,college_code2])
+                        .then(result => {
+                            console.log("INSERT "+result.rowCount);
+                            user_id = user_id + 1;
+                            console.log("values " + user_id + " " + index);
+                        })
+                        .catch(e => console.error(e.stack))
+                    }
+                })
+                .catch(e => console.error(e.stack))   
             })
         .catch(() => {
              client.end();
