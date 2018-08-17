@@ -51,7 +51,7 @@ app.post('/send_params', function(req, res) {
                 var users = req.body.finalResult;
                 var index = 0;
                 var req_fields = {gender:3,college_code:6,college_name:7,name:8,phone_number:9,email:10};
-                for(index;index<users.length;index++){
+                while(index<users.length){
                     var user = users[index];
                     var full_name = user[req_fields.name].Value;
                     var email = user[req_fields.email].Value;
@@ -66,8 +66,10 @@ app.post('/send_params', function(req, res) {
                         if(result.rowCount == 0){
                             client.query("INSERT INTO users(user_id,full_name,email,phone_number,gender,college_name,college_code) values($1,$2,$3,$4,$5,$6,$7)",[user_id,full_name,email,phone_number,gender,college_name,college_code])
                             .then(result => {
-                                console.log("INSERT "+result);
+                                console.log("INSERT "+result.rowCount);
                                 user_id = user_id + 1;
+                                index = index + 1;
+                                console.log("values " + user_id + " " + index);
                             })
                             .catch(e => console.error(e.stack))
                         }
