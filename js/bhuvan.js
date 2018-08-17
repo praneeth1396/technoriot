@@ -166,10 +166,13 @@ function authorize(emailList,passList){
 
   //forgot Password
   function forgot(){
+    var userName = document.getElementsByClassName("input-100")[currentTab*2].value;
+    console.log(userName);
     var userData = {
-        Username : document.getElementById("validationCustomUsername").value,
+        Username : userName,
         Pool : userPool
     };
+
     var cognitoUser = new AmazonCognitoIdentity.CognitoUser(userData);
 
   cognitoUser.forgotPassword({

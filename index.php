@@ -66,10 +66,13 @@
 						<span class="step"></span>
 						<span class="step"></span>
 					</div>
-					<br>
-
-					<div class="flex-col-c p-t-100 p-b-40" id="reg">
 					
+					<div class="flex-col-c p-t-100 p-b-40" id="reg">
+						
+						<span class="txt1 p-b-9">
+							Don’t have an account?
+						</span>
+						<br>
 						<span class="txt1 p-b-9">
 							Don’t have an account?
 						</span>
