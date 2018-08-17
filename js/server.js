@@ -38,7 +38,7 @@ app.post('/send_params', function(req, res) {
         connectionString: process.env.DATABASE_URL,
         ssl: true,
     });    
-    var user_id;
+    var user_id =  1;
     client.connect()
         .then(() => client.query('SELECT user_id from users order by user_id desc limit 1'))
             .then((result) => {
