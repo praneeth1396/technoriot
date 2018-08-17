@@ -33,7 +33,7 @@ app.all('/',function(req,res){
 });
 
 app.post('/send_params', function(req, res) {
-    console.log(req.body.finalResult);    
+    //console.log(req.body.finalResult);    
     const client = new Client({
         connectionString: process.env.DATABASE_URL,
         ssl: true,
@@ -62,7 +62,7 @@ app.post('/send_params', function(req, res) {
                     console.log(full_name + " " + email + " " + phone_number + " " + gender + " " + college_name + " " + college_code);    
                     client.query("SELECT user_id from users where email = $1",[email])
                     .then(result => {
-                        console.log("SECOND SELECT" +result)
+                        console.log("SECOND SELECT" +result.rowCount)
                         if(result.rowCount == 0){
                             client.query("INSERT INTO users(user_id,full_name,email,phone_number,gender,college_name,college_code) values($1,$2,$3,$4,$5,$6,$7)",[user_id,full_name,email,phone_number,gender,college_name,college_code])
                             .then(result => {
