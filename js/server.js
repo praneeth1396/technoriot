@@ -47,8 +47,7 @@ app.post('/send_params', function(req, res) {
                     user_id = 1;          
                 else{
                     console.log(result.rows[0].user_id);
-                    console.log(result.rows[0]);
-                    user_id = result.rows[0] + 1;
+                    user_id = result.rows[0].user_id + 1;
                 }    
                 console.log("USER ID "+user_id);    
                 var users = req.body.finalResult;
