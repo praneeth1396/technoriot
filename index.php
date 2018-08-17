@@ -72,7 +72,7 @@
 						<span class="txt1 p-b-9">
 							Forgot password ? 
 						</span>
-						<a onclick = "forgot();" href="javascript:void(0);">Click here</a>
+						<a onclick = "forgot();" href="javascript:void(0);" class = "txt3">Click here</a>
 						<br>
 						<span class="txt1 p-b-9">
 							Don’t have an account ?

@@ -182,7 +182,7 @@ function authorize(emailList,passList){
           console.log('CodeDeliveryData from forgotPassword: ' + data);
     },
     onFailure: function(err) {
-        //alert(err.message || JSON.stringify(err));
+        alert(err.message || JSON.stringify(err));
     },
     //Optional automatic callback
     inputVerificationCode: function(data) {
