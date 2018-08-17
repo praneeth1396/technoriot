@@ -128,7 +128,7 @@ function authorize(emailList,passList){
                             });
                         }
                         //refreshes credentials using AWS.CognitoIdentity.getCredentialsForIdentity()
-                    /*  AWS.config.credentials.refresh((error) => {
+                        AWS.config.credentials.refresh((error) => {
                             if (error) {
                                     console.error(error);
                             } else {
@@ -139,9 +139,8 @@ function authorize(emailList,passList){
                                     
                                     //$('#signin').modal('hide');
                             }
-                        }); */
+                        }); 
                     },
-
                     onFailure: function(err) {
                         //alert(err.message || JSON.stringify(err));
                         reject(err);
@@ -196,7 +195,7 @@ function authorize(emailList,passList){
         });
     }
     });
-    }
+}
 
     var currentTab = 0;
     var passList = [],emailList = [];
