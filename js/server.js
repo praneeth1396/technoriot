@@ -42,7 +42,7 @@ app.post('/send_params', function(req, res) {
     client.connect()
         .then(() => client.query('SELECT user_id from users order by user_id desc limit 1'))
             .then((result) => {
-                console.log(result.rowCount);
+                console.log("FIRST SELECT "+result.rowCount);
                 if(result.rowCount == 0)
                     user_id = 1;          
                 else
@@ -62,11 +62,11 @@ app.post('/send_params', function(req, res) {
                     console.log(full_name + " " + email + " " + phone_number + " " + gender + " " + college_name + " " + college_code);    
                     client.query("SELECT user_id from users where email = $1",[email])
                     .then(result => {
-                        console.log(result)
+                        console.log("SECOND SELECT" +result)
                         if(result.rowCount == 0){
-                            client.query("INSERT INTO users(user_id,full_name,email,phone_number,gender,college_name,college_code) values($1,$2,$3,$4,$5,$6,$7",[user_id,full_name,email,phone_number,gender,college_name,college_code])
+                            client.query("INSERT INTO users(user_id,full_name,email,phone_number,gender,college_name,college_code) values($1,$2,$3,$4,$5,$6,$7)",[user_id,full_name,email,phone_number,gender,college_name,college_code])
                             .then(result => {
-                                console.log(result);
+                                console.log("INSERT "+result);
                                 user_id = user_id + 1;
                             })
                             .catch(e => console.error(e.stack))
