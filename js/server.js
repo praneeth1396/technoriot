@@ -69,7 +69,7 @@ app.post('/send_params', function(req, res) {
                 console.log(full_name1 + " " + email1 + " " + phone_number1 + " " + gender1 + " " + college_name1 + " " + college_code1);    
                 console.log(full_name2 + " " + email2 + " " + phone_number2 + " " + gender2 + " " + college_name2 + " " + college_code2);    
                 
-                client.query("SELECT user_id from users where email = $1",[email])
+                client.query("SELECT user_id from users where (email = $1 or email = $2)",[email1,email2])
                 .then(result => {
                     console.log("SECOND SELECT" +result.rowCount)
                     if(result.rowCount == 0){
