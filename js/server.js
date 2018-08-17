@@ -45,8 +45,11 @@ app.post('/send_params', function(req, res) {
                 console.log("FIRST SELECT "+result.rowCount);
                 if(result.rowCount == 0)
                     user_id = 1;          
-                else
+                else{
+                    console.log(result.rows[0].user_id);
+                    console.log(result.rows[0]);
                     user_id = result.rows[0] + 1;
+                }    
                 console.log("USER ID "+user_id);    
                 var users = req.body.finalResult;
                 var req_fields = {gender:3,college_code:6,college_name:7,name:8,phone_number:9,email:10};
@@ -77,7 +80,7 @@ app.post('/send_params', function(req, res) {
                         .then(result => {
                             console.log("INSERT "+result.rowCount);
                             user_id = user_id + 1;
-                            console.log("values " + user_id + " " + index);
+                            console.log("Values " + user_id + " " + index);
                         })
                         .catch(e => console.error(e.stack))
                     }
