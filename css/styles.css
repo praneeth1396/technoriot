@@ -9,6 +9,7 @@ body {
     background: url("../images/sky.jpg") no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    will-change: scroll-position;
 }
 #header{
     margin-bottom:0px;
