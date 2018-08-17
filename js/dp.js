@@ -1,8 +1,17 @@
 function onLoad(){
     var firstLink = document.getElementsByTagName("a")[0];
     firstLink.style.backgroundColor = "black";
+    var toggleBtn = document.getElementById("toggle_menu_btn");
+    toggleBtn.style.display = "inline";
     var firstElement = document.getElementById("about_section");
     firstElement.style.display = "block";
+    var firstHeading = document.getElementById("info_h");
+    firstHeading.style.display = "inline";
+    var i = 1;
+    var headers = document.getElementsByTagName("h3");
+    for(i; i< headers.length;i++){
+        headers[i].style.display = "none";
+    }
 }
 function toggleSection(e){
     var anchorTags = document.getElementsByTagName("a");
@@ -16,12 +25,30 @@ function toggleSection(e){
     e.currentTarget.style.backgroundColor = "black";
     
     var main = document.getElementsByClassName("main")[0];
-    var i = 1;
-    for(i;i<8;i+=2){
+    var i = 5;
+    for(i;i<13;i+=2){
         var child = main.childNodes[i];
-        if(i != sectionId)
+        if(i != sectionId){
             child.style.display = "none";
-        else
+            if(child.id == "about_section")
+                document.getElementById("info_h").style.display = "none";
+            else if(child.id == "problem_section")
+                document.getElementById("problem_h").style.display = "none";
+            else if(child.id == "rules_section")
+                document.getElementById("rules_h").style.display = "none";
+            else
+                document.getElementById("contact_h").style.display = "none";
+        }
+        else{
             child.style.display = "block";
+            if(child.id == "about_section")
+                document.getElementById("info_h").style.display = "inline";
+            else if(child.id == "problem_section")
+                document.getElementById("problem_h").style.display = "inline";
+            else if(child.id == "rules_section")
+                document.getElementById("rules_h").style.display = "inline";
+            else
+                document.getElementById("contact_h").style.display = "inline";
+        }
     }
 }
