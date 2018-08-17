@@ -40,9 +40,9 @@ body {
 }
 
 #sidebar{
-    background: none;
     padding: 0px;
 }
+
 #sidebar .list-group-item{
     background:none;
     border: 0px;

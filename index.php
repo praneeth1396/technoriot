@@ -67,8 +67,7 @@
 						<span class="step"></span>
 					</div>
 
-					<div class="flex-col-c p-t-100 p-b-40" id="reg">
-						
+					<div class="flex-col-c p-t-100 p-b-40" id="reg">						
 						<span class="txt1 p-b-9">
 							Forgot password ? 
 						</span>
