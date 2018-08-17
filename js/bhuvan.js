@@ -167,7 +167,7 @@ function authorize(emailList,passList){
   //forgot Password
   function forgot(){
     console.log(currentTab);
-    var userName = document.getElementsByClassName("input-100")[currentTab*2].value;
+    var userName = document.getElementsByTagName("input")[currentTab*2].value;
     console.log(userName);
     var userData = {
         Username : userName,
