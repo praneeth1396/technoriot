@@ -267,7 +267,8 @@ function authorize(emailList,passList){
 
             },function(err){
                 console.log(err);
-                window.location = "index.php";
+                alert("USER NOT FOUND " + err);
+                location.reload();
             });
             return false;
         }
