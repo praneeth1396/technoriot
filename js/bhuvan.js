@@ -267,7 +267,7 @@ function authorize(emailList,passList){
 
             },function(err){
                 console.log(err);
-                window.location.href = "index.html";
+                window.location.href = "index.php";
             });
             return false;
         }
