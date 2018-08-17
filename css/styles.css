@@ -15,6 +15,7 @@ body:before{
     position: fixed;
     background-size: cover;
     will-change: transform;
+    z-index: -3;
     content : " ";
 }
 #header{
