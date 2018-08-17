@@ -38,7 +38,7 @@ app.post('/send_params', function(req, res) {
         connectionString: process.env.DATABASE_URL,
         ssl: true,
     });    
-    var user_id =  1;
+    var user_id;
     client.connect()
         .then(() => client.query('SELECT user_id from users order by user_id desc limit 1'))
             .then((result) => {
@@ -57,7 +57,9 @@ app.post('/send_params', function(req, res) {
                         var college_name = user[req_fields.college_name].Value;
                         var college_code = user[req_fields.college_code].Value;
                         console.log(full_name + " " + email + " " + phone_number + " " + gender + " " + college_name + " " + college_code);    
-                            
+                        client.query("SELECT user_id from users where email = $1",[email])
+                        .then(result => console.log(result))
+                        .catch(e => console.error(e.stack))   
                     }
                 }
                 else
@@ -66,7 +68,6 @@ app.post('/send_params', function(req, res) {
         .catch(() => {
              client.end();
         });
-    console.log("USER ID "+user_id);
     res.end("Success");
 });
 
