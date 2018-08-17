@@ -66,6 +66,7 @@ app.post('/send_params', function(req, res) {
         .catch(() => {
              client.end();
         });
+    console.log("USER ID "+user_id);
     res.end("Success");
 });
 
