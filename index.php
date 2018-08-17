@@ -66,15 +66,16 @@
 						<span class="step"></span>
 						<span class="step"></span>
 					</div>
-					
+
 					<div class="flex-col-c p-t-100 p-b-40" id="reg">
 						
 						<span class="txt1 p-b-9">
-							Don’t have an account?
+							Forgot password ? 
 						</span>
+						<a onclick = "forgot();" href="javascript:void(0);">Click here</a>
 						<br>
 						<span class="txt1 p-b-9">
-							Don’t have an account?
+							Don’t have an account ?
 						</span>
 
 						<a href="http://www.psgtechlogin.in" class="txt3">
