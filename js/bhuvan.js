@@ -154,6 +154,7 @@ function authorize(emailList,passList){
             },function(err){
                console.log(err);              
                var old_message = err.message; 
+               console.log(old_message);
                err.message = old_message + ":" + emailList[i];               
                reject(err); 
             });
