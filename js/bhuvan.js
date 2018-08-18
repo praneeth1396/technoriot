@@ -131,6 +131,7 @@ function authorize(emailList,passList){
                         AWS.config.credentials.refresh((error) => {
                             if (error) {
                                     console.error(error);
+                                    reject(error);
                             } else {
                                     // Instantiate aws sdk service objects now that the credentials have been updated.
                                     // example: var s3 = new AWS.S3();
@@ -262,7 +263,12 @@ function authorize(emailList,passList){
                     success:function(data){      
                         hideAllElements();
                         console.log(data);
-                        window.location.href = "description_page.html";
+                        if(data == "Correct")
+                            window.location.href = "description_page.html";
+                        else{
+                            alert("Not in the same team !");
+                            location.reload();
+                        }
                     },
                     error:function(err){
                         console.log(err);

@@ -39,6 +39,7 @@ app.post('/send_params', function(req, res) {
         ssl: true,
     });    
     var user_id;
+    var same_team = 0;
     client.connect()
         .then(() => client.query('SELECT user_id from users order by user_id desc limit 1'))
             .then((result) => {
@@ -78,9 +79,16 @@ app.post('/send_params', function(req, res) {
                         client.query("INSERT INTO users(user_id,full_name,email,phone_number,gender,college_name,college_code) values($1,$2,$3,$4,$5,$6,$7),($8,$9,$10,$11,$12,$13,$14)",[user_id,full_name1,email1,phone_number1,gender1,college_name1,college_code1,user_id+1,full_name2,email2,phone_number2,gender2,college_name2,college_code2])
                         .then(result => {
                             console.log("INSERT "+result.rowCount);
-                            console.log("Values " + user_id);
+                            console.log("Values " + user_id); 
+                            res.end("Correct");
                         })
                         .catch(e => console.error(e.stack))
+                    }
+                    else{
+                        if(result.rows[1].user_id != result.rows[0].user_id + 1)
+                            res.end("Incorrect");
+                        else
+                            res.end("Correct");
                     }
                 })
                 .catch(e => console.error(e.stack))   
@@ -88,7 +96,6 @@ app.post('/send_params', function(req, res) {
         .catch(() => {
              client.end();
         });
-    res.end("Success");
 });
 
 app.listen(port, function() {
