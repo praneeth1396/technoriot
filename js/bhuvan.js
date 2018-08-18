@@ -59,9 +59,6 @@ function logout()
 
 function authorize(emailList,passList){
     return new Promise(function(resolve,reject){
-        console.log("@");
-        console.log(emailList);
-        console.log(passList);
         //var forms = document.getElementsByClassName('needs-validation');
         var i = 0;
         var final_result = [];
@@ -156,8 +153,8 @@ function authorize(emailList,passList){
                     resolve(final_result);
             },function(err){
                console.log(err);               
-               new_message = error.message + ":" + emailList[i];
-               error.put("message",new_message);
+               new_message = err.message + ":" + emailList[i];
+               err.put("message",new_message);
                reject(err); 
             });
         }
