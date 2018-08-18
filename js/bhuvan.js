@@ -246,7 +246,7 @@ function authorize(emailList,passList){
         if (currentTab >= x.length) {
             //console.log(emailList);
             //console.log(passList);
-            waitAllElements();
+            hideAllElements();
             authorize(emailList,passList).then(function(result){
                 //console.log(result);
                 $.ajax({
@@ -258,11 +258,12 @@ function authorize(emailList,passList){
                         "finalResult":result
                     }),
                     contentType: 'application/json',
-                    success:function(data){      
-                        hideAllElements();
+                    success:function(data){
                         console.log(data);
-                        if(data == "Correct")
+                        if(data == "Correct"){                        
+                            showStatus();
                             window.location.href = "description_page.html";
+                        }
                         else{
                             alert("Not in the same team !");
                             location.reload();
@@ -283,14 +284,14 @@ function authorize(emailList,passList){
         showTab(currentTab);
     }
     
-    function waitAllElements(){
+    function hideAllElements(){
         document.getElementById("prevBtn").style.display = "none";
         document.getElementById("nextBtn").style.display = "none";    
         document.getElementById("steps").style.display = "none";
         document.getElementById("reg").style.display = "none";
         document.getElementsByClassName("login100-form-title")[0].innerHTML = "Please wait ...";
     }
-    function hideAllElements(){
+    function showStatus(){
         document.getElementsByClassName("login100-form-title")[0].innerHTML = "Logged in successfully !";
     }
     
