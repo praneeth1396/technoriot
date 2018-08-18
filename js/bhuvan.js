@@ -131,8 +131,6 @@ function authorize(emailList,passList){
                         AWS.config.credentials.refresh((error) => {
                             if (error) {
                                     console.error(error);
-                                    new_message = error.message + ":" + emailList[i];
-                                    error.put("message",new_message);
                                     reject(error);
                             } else {
                                     // Instantiate aws sdk service objects now that the credentials have been updated.
@@ -157,7 +155,9 @@ function authorize(emailList,passList){
                if(final_result.length == 2)
                     resolve(final_result);
             },function(err){
-               console.log(err);
+               console.log(err);               
+               new_message = error.message + ":" + emailList[i];
+               error.put("message",new_message);
                reject(err); 
             });
         }
