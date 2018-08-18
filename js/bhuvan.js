@@ -127,12 +127,12 @@ function authorize(emailList,passList){
                         //refreshes credentials using AWS.CognitoIdentity.getCredentialsForIdentity()
                         AWS.config.credentials.refresh((error) => {
                             if (error) {
-                                    console.error(error);
+                                    //console.error(error);
                                     reject(error);
                             } else {
                                     // Instantiate aws sdk service objects now that the credentials have been updated.
                                     // example: var s3 = new AWS.S3();
-                                    console.log('Successfully logged!');
+                                    //console.log('Successfully logged!');
                                     
                                     //$('#signin').modal('hide');
                             }
@@ -147,15 +147,16 @@ function authorize(emailList,passList){
             event.preventDefault();
             event.stopPropagation();
             promise.then(function(result){
-               console.log(result);
+               //console.log(result);
                final_result.push(result);
                if(final_result.length == 2)
                     resolve(final_result);
             },function(err){
-               console.log(err);              
+               //console.log(err);
+               /*               
                var old_message = err.message; 
                console.log(old_message);
-               err.message = old_message + ":" + emailList[i];               
+               err.message = old_message + ":" + emailList[i];  */              
                reject(err); 
             });
         }
@@ -166,9 +167,9 @@ function authorize(emailList,passList){
 
   //forgot Password
   function forgot(){
-    console.log(currentTab);
+    //console.log(currentTab);
     var userName = document.getElementsByTagName("input")[currentTab*2].value;
-    console.log(userName);
+    //console.log(userName);
     var userData = {
         Username : userName,
         Pool : userPool
@@ -178,21 +179,21 @@ function authorize(emailList,passList){
 
   cognitoUser.forgotPassword({
     onSuccess: function (data) {
-          console.log('CodeDeliveryData from forgotPassword: ' + data);
+          //console.log('CodeDeliveryData from forgotPassword: ' + data);
     },
     onFailure: function(err) {
         alert(err.message || JSON.stringify(err));
     },
     inputVerificationCode: function(data) {
-        console.log('Code sent to: ' + data);
+        //console.log('Code sent to: ' + data);
         var verificationCode = prompt('Please input verification code ' ,'');
         var newPassword = prompt('Enter new password ' ,'');
         cognitoUser.confirmPassword(verificationCode, newPassword, {
             onSuccess() {
-                console.log('Password confirmed!');
+                //console.log('Password confirmed!');
             },
             onFailure(err) {
-                console.log('Password not confirmed!');
+                //console.log('Password not confirmed!');
             }
         });
     }
@@ -233,7 +234,7 @@ function authorize(emailList,passList){
     }
     function nextPrev(n) {
         var check = validateForm();
-        console.log(check);
+        //console.log(check);
         var x = document.getElementsByClassName("tab");
     
         if(!check) return false;
@@ -243,12 +244,11 @@ function authorize(emailList,passList){
         currentTab = currentTab + n;
     
         if (currentTab >= x.length) {
-            console.log(emailList);
-            console.log(passList);
-            
+            //console.log(emailList);
+            //console.log(passList);
+            waitAllElements();
             authorize(emailList,passList).then(function(result){
-                console.log(result);  
-                waitAllElements();
+                //console.log(result);
                 $.ajax({
                     url: "https://techno-riot.herokuapp.com/send_params",
                     type: "POST",
@@ -269,12 +269,12 @@ function authorize(emailList,passList){
                         }
                     },
                     error:function(err){
-                        console.log(err);
+                        //console.log(err);
                     }
                 });
 
             },function(err){
-                console.log(err);
+                //console.log(err);
                 alert(err.message);
                 location.reload();
             });
