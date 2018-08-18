@@ -131,12 +131,12 @@ function authorize(emailList,passList){
                         AWS.config.credentials.refresh((error) => {
                             if (error) {
                                     console.error(error);
-                                    error.message += ":" + emailList[i];
+                                    new_message = error.message + ":" + emailList[i];
+                                    error.put("message",new_message);
                                     reject(error);
                             } else {
                                     // Instantiate aws sdk service objects now that the credentials have been updated.
                                     // example: var s3 = new AWS.S3();
-
                                     console.log('Successfully logged!');
                                     
                                     //$('#signin').modal('hide');
@@ -250,6 +250,7 @@ function authorize(emailList,passList){
             
             authorize(emailList,passList).then(function(result){
                 console.log(result);  
+                waitAllElements();
                 $.ajax({
                     url: "https://techno-riot.herokuapp.com/send_params",
                     type: "POST",
@@ -276,7 +277,7 @@ function authorize(emailList,passList){
 
             },function(err){
                 console.log(err);
-                alert("USER NOT FOUND " + err.message);
+                alert(err.message);
                 location.reload();
             });
             return false;
@@ -284,11 +285,14 @@ function authorize(emailList,passList){
         showTab(currentTab);
     }
     
-    function hideAllElements(){
+    function waitAllElements(){
         document.getElementById("prevBtn").style.display = "none";
         document.getElementById("nextBtn").style.display = "none";    
         document.getElementById("steps").style.display = "none";
         document.getElementById("reg").style.display = "none";
+        document.getElementsByClassName("login100-form-title")[0].innerHTML = "Please wait ...";
+    }
+    function hideAllElements(){
         document.getElementsByClassName("login100-form-title")[0].innerHTML = "Logged in successfully !";
     }
     
