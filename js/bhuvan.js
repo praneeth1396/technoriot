@@ -152,9 +152,9 @@ function authorize(emailList,passList){
                if(final_result.length == 2)
                     resolve(final_result);
             },function(err){
-               console.log(err);               
-               new_message = err.message + ":" + emailList[i];
-               err.put("message",new_message);
+               console.log(err);              
+               var old_message = err.message; 
+               err.message = old_message + ":" + emailList[i];               
                reject(err); 
             });
         }
