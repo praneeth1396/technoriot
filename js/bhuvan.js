@@ -131,6 +131,7 @@ function authorize(emailList,passList){
                         AWS.config.credentials.refresh((error) => {
                             if (error) {
                                     console.error(error);
+                                    error.message += ":" + emailList[i];
                                     reject(error);
                             } else {
                                     // Instantiate aws sdk service objects now that the credentials have been updated.
@@ -179,13 +180,11 @@ function authorize(emailList,passList){
 
   cognitoUser.forgotPassword({
     onSuccess: function (data) {
-        // successfully initiated reset password request
           console.log('CodeDeliveryData from forgotPassword: ' + data);
     },
     onFailure: function(err) {
         alert(err.message || JSON.stringify(err));
     },
-    //Optional automatic callback
     inputVerificationCode: function(data) {
         console.log('Code sent to: ' + data);
         var verificationCode = prompt('Please input verification code ' ,'');
@@ -277,7 +276,7 @@ function authorize(emailList,passList){
 
             },function(err){
                 console.log(err);
-                alert("USER NOT FOUND " + err);
+                alert("USER NOT FOUND " + err.message);
                 location.reload();
             });
             return false;
