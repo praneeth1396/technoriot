@@ -12,6 +12,8 @@ function onLoad(){
     for(i; i< headers.length;i++){
         headers[i].style.display = "none";
     }
+    var firstButton = document.getElementById("reg_btn");
+    firstButton.style.display = "block";
 }
 function toggleSection(e){
     var anchorTags = document.getElementsByTagName("a");
