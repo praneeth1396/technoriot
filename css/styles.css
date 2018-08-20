@@ -106,7 +106,11 @@ body:before{
     text-decoration: none;
 }
 
-
+@media screen and (max-width: 400px){
+    .modal-footer{
+        padding: 5px;
+    }
+}
 
 @media screen and (max-width: 480px) {
   #sidebar {padding-top:10px;}
