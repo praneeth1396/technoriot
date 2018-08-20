@@ -262,10 +262,11 @@ function authorize(emailList,passList){
                         console.log(data);
                         if(data == "Correct"){                        
                             showStatus();
-                            window.location.href = "description_page.html";
+                           // window.location.href = "description_page.html";
+                           $("#statusModal").modal('show');
                         }
                         else{
-                            alert("Not in the same team !");
+                            alert("Already Registered !");
                             location.reload();
                         }
                     },

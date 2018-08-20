@@ -85,10 +85,7 @@ app.post('/send_params', function(req, res) {
                         .catch(e => console.error(e.stack))
                     }
                     else{
-                        if(result.rows[1].user_id != result.rows[0].user_id + 1)
-                            res.end("Incorrect");
-                        else
-                            res.end("Correct");
+                        res.end("Already Registered");
                     }
                 })
                 .catch(e => console.error(e.stack))   
