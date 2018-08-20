@@ -256,6 +256,17 @@ function authorize(emailList,passList){
         $('#statusModal').on('hidden.bs.modal', function () {
             location.reload();
         });
+        $(window).resize(function(){
+            var windowWidth = $(window).width();
+            if(windowWidth < 768){
+                modal.classList.remove("bs-example-modal-lg");  
+                modal.classList.add("bs-example-modal-sm");
+            }  
+            else{                  
+                modal.classList.remove("bs-example-modal-sm");
+                modal.classList.add("bs-example-modal-lg");   
+            }
+        });
         var check = validateForm();
         //console.log(check);
         var x = document.getElementsByClassName("tab");
@@ -270,14 +281,7 @@ function authorize(emailList,passList){
             //console.log(emailList);
             //console.log(passList);            
             var modal = document.getElementById("statusModal");  
-            if(window.innerWidth < 768){
-                modal.classList.remove("bs-example-modal-lg");  
-                modal.classList.add("bs-example-modal-sm");
-            }  
-            else{                  
-                modal.classList.remove("bs-example-modal-sm");
-                modal.classList.add("bs-example-modal-lg");   
-            }
+            
             var header = modal.getElementsByClassName("modal-title")[0];   
             var body = modal.getElementsByClassName("body-content")[0];
             var buttons = modal.getElementsByClassName("modal-footer")[0];
