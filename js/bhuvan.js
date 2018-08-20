@@ -266,8 +266,8 @@ function authorize(emailList,passList){
                            $("#statusModal").modal('show');
                         }
                         else{
-                            alert("Already Registered !");
-                            location.reload();
+                            $("#statusModal").modal('show');
+                            location.reload();                            
                         }
                     },
                     error:function(err){
