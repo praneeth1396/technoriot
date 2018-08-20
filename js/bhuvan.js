@@ -167,9 +167,21 @@ function authorize(emailList,passList){
 
   //forgot Password
   function forgot(){
-    //console.log(currentTab);
+    //console.log(currentTab);    
+    var modal = document.getElementById("statusModal");
+    var header = modal.getElementsByClassName("modal-header")[0].childNodes[1];
+    var body = modal.getElementsByClassName("modal-body")[0].childNodes[0];
+    var buttons = modal.getElementsByClassName("modal-footer")[0];
+
+    buttons.style.display = "none";
+
     var userName = document.getElementsByTagName("input")[currentTab*2].value;
     //console.log(userName);
+    if(userName == undefined){
+        header.innerHTML = "Invalid email id";
+        body.innerHTML = "Please provide an email id";
+        $("#statusModal").modal('show');
+    }
     var userData = {
         Username : userName,
         Pool : userPool
@@ -181,8 +193,10 @@ function authorize(emailList,passList){
     onSuccess: function (data) {
           //console.log('CodeDeliveryData from forgotPassword: ' + data);
     },
-    onFailure: function(err) {
-        alert(err.message || JSON.stringify(err));
+    onFailure: function(err) {        
+        header.innerHTML = "Invalid email id";
+        body.innerHTML = err.message;
+        $("#statusModal").modal('show');
     },
     inputVerificationCode: function(data) {
         //console.log('Code sent to: ' + data);
@@ -190,9 +204,15 @@ function authorize(emailList,passList){
         var newPassword = prompt('Enter new password ' ,'');
         cognitoUser.confirmPassword(verificationCode, newPassword, {
             onSuccess() {
-                //console.log('Password confirmed!');
+                //console.log('Password confirmed!')                    
+                header.innerHTML = "Success";
+                body.innerHTML = "Password changed successfully";
+                $("#statusModal").modal('show');
             },
             onFailure(err) {
+                header.innerHTML = "Failure ";
+                body.innerHTML = "Password could not be changed";
+                $("#statusModal").modal('show');
                 //console.log('Password not confirmed!');
             }
         });
@@ -233,6 +253,9 @@ function authorize(emailList,passList){
     
     }
     function nextPrev(n) {
+        $('#myModal').on('hidden.bs.modal', function () {
+            location.reload();
+        });
         var check = validateForm();
         //console.log(check);
         var x = document.getElementsByClassName("tab");
@@ -246,6 +269,11 @@ function authorize(emailList,passList){
         if (currentTab >= x.length) {
             //console.log(emailList);
             //console.log(passList);
+            var modal = document.getElementById("statusModal");
+            var header = modal.getElementsByClassName("modal-header")[0].childNodes[1];    
+            var body = modal.getElementsByClassName("modal-body")[0].childNodes[0];
+            var buttons = modal.getElementsByClassName("modal-footer")[0];
+            buttons.style.display = "block";
             hideAllElements();
             authorize(emailList,passList).then(function(result){
                 //console.log(result);
@@ -261,24 +289,29 @@ function authorize(emailList,passList){
                     success:function(data){
                         console.log(data);
                         if(data == "Correct"){                        
-                            showStatus();
-                           // window.location.href = "description_page.html";
+                           showStatus();
+                           header.innerHTML = "Successfully Registered";
                            $("#statusModal").modal('show');
                         }
                         else{
-                            $("#statusModal").modal('show');
-                            location.reload();                            
+                           header.innerHTML = "Already Registered";
+                           $("#statusModal").modal('show');                           
                         }
                     },
                     error:function(err){
                         //console.log(err);
+                        header.innerHTML = err;
                     }
                 });
 
             },function(err){
                 //console.log(err);
-                alert(err.message);
-                location.reload();
+                //alert(err.message);
+                header.innerHTML = "Error";
+                body.innerHTML = err.message;
+                buttons.style.display = "none";
+                $("#statusModal").modal('show'); 
+                //location.reload();
             });
             return false;
         }

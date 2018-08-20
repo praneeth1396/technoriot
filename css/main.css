@@ -442,6 +442,10 @@ input.invalid {
   background-color: #ffdddd;
 }
 
+.modal-footer a{
+  text-decoration: none;
+}
+
 @media (max-width: 992px) {
   .alert-validate::before {
     visibility: visible;
