@@ -257,15 +257,15 @@ function authorize(emailList,passList){
             location.reload();
         });
         $(window).resize(function(){            
-            var modal = document.getElementById("statusModal");  
+            var myModal = document.getElementById("statusModal");  
             var windowWidth = $(window).width();
             if(windowWidth < 768){
-                modal.classList.remove("bs-example-modal-lg");  
-                modal.classList.add("bs-example-modal-sm");
+                myModal.classList.remove("bs-example-modal-lg");  
+                myModal.classList.add("bs-example-modal-sm");
             }  
             else{                  
-                modal.classList.remove("bs-example-modal-sm");
-                modal.classList.add("bs-example-modal-lg");   
+                myModal.classList.remove("bs-example-modal-sm");
+                myModal.classList.add("bs-example-modal-lg");   
             }
         });
         var check = validateForm();
@@ -280,7 +280,8 @@ function authorize(emailList,passList){
     
         if (currentTab >= x.length) {
             //console.log(emailList);
-            //console.log(passList);                        
+            //console.log(passList);       
+            var modal = document.getElementById("statusModal");                   
             var header = modal.getElementsByClassName("modal-title")[0];   
             var body = modal.getElementsByClassName("body-content")[0];
             var buttons = modal.getElementsByClassName("modal-footer")[0];
