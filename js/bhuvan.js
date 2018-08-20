@@ -170,7 +170,7 @@ function authorize(emailList,passList){
     //console.log(currentTab);    
     var modal = document.getElementById("statusModal");
     var header = modal.getElementsByClassName("modal-title")[0];
-    var body = modal.getElementsByClassName("modal-body")[0].childNodes[0];
+    var body = modal.getElementsByClassName("body-content")[0];
     var buttons = modal.getElementsByClassName("modal-footer")[0];
 
     buttons.style.display = "none";
@@ -271,7 +271,7 @@ function authorize(emailList,passList){
             //console.log(passList);
             var modal = document.getElementById("statusModal");    
             var header = modal.getElementsByClassName("modal-title")[0];   
-            var body = modal.getElementsByClassName("modal-body")[0].childNodes[0];
+            var body = modal.getElementsByClassName("body-content")[0];
             var buttons = modal.getElementsByClassName("modal-footer")[0];
             buttons.style.display = "block";
             hideAllElements();
