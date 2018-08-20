@@ -169,7 +169,7 @@ function authorize(emailList,passList){
   function forgot(){
     //console.log(currentTab);    
     var modal = document.getElementById("statusModal");
-    var header = modal.getElementsByClassName("modal-header")[0].childNodes[1];
+    var header = modal.getElementsByClassName("modal-title")[0];
     var body = modal.getElementsByClassName("modal-body")[0].childNodes[0];
     var buttons = modal.getElementsByClassName("modal-footer")[0];
 
@@ -269,8 +269,8 @@ function authorize(emailList,passList){
         if (currentTab >= x.length) {
             //console.log(emailList);
             //console.log(passList);
-            var modal = document.getElementById("statusModal");
-            var header = modal.getElementsByClassName("modal-header")[0].childNodes[1];    
+            var modal = document.getElementById("statusModal");    
+            var header = modal.getElementsByClassName("modal-title")[0];   
             var body = modal.getElementsByClassName("modal-body")[0].childNodes[0];
             var buttons = modal.getElementsByClassName("modal-footer")[0];
             buttons.style.display = "block";
