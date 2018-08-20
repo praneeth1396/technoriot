@@ -99,12 +99,7 @@ body:before{
 }
 
 #reg_btn{
-    display: block;
     text-decoration: none;
-}
-#reg_btn::before{
-    content: '\f2f6' + ' Register';
-    font-family: FontAwesome;
 }
 
 @media screen and (max-width: 480px) {

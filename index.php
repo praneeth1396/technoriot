@@ -91,7 +91,7 @@
 						Contact: Kishore (9655568122) 
 					</p>
 				</div>
-				<a href="register.html" class="btn btn-success" id="reg_btn"/>
+				<a href="register.html" class="btn btn-success" id="reg_btn"> Register </a>
 			</div>
 		</div>
 	</div>
