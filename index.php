@@ -58,7 +58,7 @@
 								We expect your team to cover the below mentioned milestones. All of these will add up to your final assesment, Problem statement will be released on 22-Aug-18 so try to complete each one for brownie points. 
 							</p><br>
 						<p><u> Milestone 1: </u> (03-SEP-18) <br>
-								Share with us a PPT(max 5 slides) and Video(max 5 min) jointly covering these aspects: <br>
+								Share with us a PPT(max 5 slides) along with the demo of the product and Video(max 5 min) jointly covering these aspects: <br>
 									1. Introduce your team telling us everyone's role. <br>
 									2. Provide an overview of your idea describing your workflow. <br>
 									3. Tell us the motivation behind this idea and its application in real time. <br>
@@ -91,6 +91,7 @@
 						Contact: Kishore (9655568122) 
 					</p>
 				</div>
+				<a href="register.html" class="btn btn-success" id="reg_btn"/>
 			</div>
 		</div>
 	</div>
