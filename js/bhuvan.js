@@ -303,10 +303,12 @@ function authorize(emailList,passList){
                         if(data == "Correct"){                        
                            showStatus();
                            header.innerHTML = "Successfully Registered";
+                           body.innerHTML = "Please choose one of the below";
                            $("#statusModal").modal('show');
                         }
                         else{
-                           header.innerHTML = "Already Registered";
+                           header.innerHTML = "Already Registered";                           
+                           body.innerHTML = "Please choose one of the below";
                            $("#statusModal").modal('show');                           
                         }
                     },
