@@ -253,7 +253,7 @@ function authorize(emailList,passList){
     
     }
     function nextPrev(n) {
-        $('#myModal').on('hidden.bs.modal', function () {
+        $('#statusModal').on('hidden.bs.modal', function () {
             location.reload();
         });
         var check = validateForm();
