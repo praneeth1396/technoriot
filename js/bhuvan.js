@@ -256,7 +256,8 @@ function authorize(emailList,passList){
         $('#statusModal').on('hidden.bs.modal', function () {
             location.reload();
         });
-        $(window).resize(function(){
+        $(window).resize(function(){            
+            var modal = document.getElementById("statusModal");  
             var windowWidth = $(window).width();
             if(windowWidth < 768){
                 modal.classList.remove("bs-example-modal-lg");  
@@ -279,9 +280,7 @@ function authorize(emailList,passList){
     
         if (currentTab >= x.length) {
             //console.log(emailList);
-            //console.log(passList);            
-            var modal = document.getElementById("statusModal");  
-            
+            //console.log(passList);                        
             var header = modal.getElementsByClassName("modal-title")[0];   
             var body = modal.getElementsByClassName("body-content")[0];
             var buttons = modal.getElementsByClassName("modal-footer")[0];
