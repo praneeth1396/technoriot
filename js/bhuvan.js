@@ -271,12 +271,12 @@ function authorize(emailList,passList){
             //console.log(passList);            
             var modal = document.getElementById("statusModal");  
             if(window.innerWidth < 768){
-                modal.style.classList.remove("bs-example-modal-lg");  
-                modal.style.classList.add("bs-example-modal-sm");
+                modal.classList.remove("bs-example-modal-lg");  
+                modal.classList.add("bs-example-modal-sm");
             }  
             else{                  
-                modal.style.classList.remove("bs-example-modal-sm");
-                modal.style.classList.add("bs-example-modal-lg");   
+                modal.classList.remove("bs-example-modal-sm");
+                modal.classList.add("bs-example-modal-lg");   
             }
             var header = modal.getElementsByClassName("modal-title")[0];   
             var body = modal.getElementsByClassName("body-content")[0];
