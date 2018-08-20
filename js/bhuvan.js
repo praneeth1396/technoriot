@@ -268,8 +268,16 @@ function authorize(emailList,passList){
     
         if (currentTab >= x.length) {
             //console.log(emailList);
-            //console.log(passList);
-            var modal = document.getElementById("statusModal");    
+            //console.log(passList);            
+            var modal = document.getElementById("statusModal");  
+            if(window.innerWidth < 768){
+                modal.style.classList.remove("bs-example-modal-lg");  
+                modal.style.classList.add("bs-example-modal-sm");
+            }  
+            else{                  
+                modal.style.classList.remove("bs-example-modal-sm");
+                modal.style.classList.add("bs-example-modal-lg");   
+            }
             var header = modal.getElementsByClassName("modal-title")[0];   
             var body = modal.getElementsByClassName("body-content")[0];
             var buttons = modal.getElementsByClassName("modal-footer")[0];
