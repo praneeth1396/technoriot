@@ -80,7 +80,7 @@
 							Your team will have to give a presentation on the day of Login (29<sup>th</sup> September) at the venue along with a demo of your product. <br>
 						</p>
 						<p>
-							Complete and email all the milestones to <u>@login.com.</u> <br>
+							Complete and email all the milestones to <u>technoriotlogin2k18@gmail.com.</u> <br>
 						</p>
 						<p>
 							Happy innovating and building! <br>					
