@@ -50,7 +50,18 @@
 				</div>
 				<div id="problem_section">
 					<p>
-						<b>Coming soon on August 22 ! </b>
+						<b>Agriculture</b> <br>
+						When was the last time you saw a crop field? On the side of the road, when you were taking a road trip? Did you find it breathtaking? Did you take pictures with the field as backdrop? Did you wonder what kind of lives those farmers live? In a place that is slowly forgetting half its traditional professions, farming is fading to the back of the general populace’s minds. It is an undeniable truth that this forgotten section of our society needs our help. Do you have an idea that can help? Bring your idea to fruition! Present it and win!
+					</p>
+					<br>
+					<p>
+						<b>Healthcare</b> <br>
+						Epilepsy, Alzheimer's, Cerebral Palsy, Schizophrenia, Parkinson's and Dementia - these are just a few of many diseases that adversely affect the daily lives of millions, not to mention the numerous people with other mental and physical disabilities. Anything that we can do to help them lead their daily lives would be a boon for them and their caretakers. Can you think of something to let them experience life better? To make their daily lives a little less stressful? Can you implement it? Present it to us and win!
+					</p>
+					<br>
+					<p>
+						<b>Resource usage optimization</b> <br>
+						Global warming is an inescapable fact. So is the mountainous amount of waste that is floating in our oceans. Fuel levels have depleted and water scarcity already affects every continent. The looming question for humanity is “How much longer can we sustain ourselves as a species?”. How many more generations will live the resource-rich lives that we have led? How can we prevent resource exhaustion? Do you have an idea? Can bring your plan to reality? Present it to us and win!
 					</p>
 				</div>
 				<div id="rules_section">
