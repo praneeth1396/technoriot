@@ -98,11 +98,6 @@ body:before{
     text-align: left;
 }
 
-#agri::before,#health::before,#resource::before{
-    font-family: FontAwesome;
-    content: '\f059' + ' ';
-}
-
 .btn-holder{
     display: inline-block;
     text-align: center;    
