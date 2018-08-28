@@ -171,7 +171,7 @@ function authorize(emailList,passList){
 
     var userName = document.getElementsByTagName("input")[currentTab*2].value;
     //console.log(userName);
-    if(userName == undefined){
+    if(userName == ''){
         header.innerHTML = "Invalid email id";
         body.innerHTML = "Please provide an email id";
         $("#statusModal").modal('show');

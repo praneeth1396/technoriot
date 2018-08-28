@@ -104,7 +104,7 @@
 				</div>
 				<div id="contact_section">
 					<p>
-						Contact: Kishore (9655568122) 
+						Kishore (9655568122) 
 					</p>
 				</div>
 			</div>

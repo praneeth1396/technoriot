@@ -160,10 +160,9 @@ iframe {
   align-items: center;
   padding: 15px;
   position: relative;
-  /*background: url("../images/green.jpg") no-repeat;
+  background: url("../images/green.jpg") no-repeat;
   background-size: cover;
-  background-attachment: fixed;*/
-  background-color:beige;
+  background-attachment: fixed;
 }
 
 .left-div{
