@@ -65,7 +65,7 @@ hr{
     text-decoration: none;
     font-size: 20px;
     background:none;
-    color: darkblue;
+    color: black;
     display: block;
     font-family : "Parkavenue, cursive";
     border-top-right-radius: 25px;
@@ -73,7 +73,7 @@ hr{
 }
 
 #sidebar .list-group-item a:hover {
-    background-color:beige;
+    background-color:black;
 }
 .main {
     margin-top: 20px;

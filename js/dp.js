@@ -1,6 +1,6 @@
 function onLoad(){
     var firstLink = document.getElementsByTagName("a")[0];
-    firstLink.style.backgroundColor = "red";
+    firstLink.style.backgroundColor = "black";
     var toggleBtn = document.getElementById("toggle_menu_btn");
     toggleBtn.style.display = "inline";
     var firstElement = document.getElementById("about_section");
@@ -24,7 +24,7 @@ function toggleSection(e){
     }
     console.log(e.currentTarget);
     var sectionId = e.currentTarget.getAttribute("data-id");
-    e.currentTarget.style.backgroundColor = "red";
+    e.currentTarget.style.backgroundColor = "black";
     
     var main = document.getElementsByClassName("main")[0];
     var i = 9;
