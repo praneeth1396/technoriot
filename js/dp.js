@@ -24,7 +24,7 @@ function toggleSection(e){
     }
     console.log(e.currentTarget);
     var sectionId = e.currentTarget.getAttribute("data-id");
-    e.currentTarget.style.backgroundColor = "black";
+    e.currentTarget.style.backgroundColor = "blue";
     
     var main = document.getElementsByClassName("main")[0];
     var i = 7;

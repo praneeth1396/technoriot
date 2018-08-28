@@ -37,6 +37,12 @@ body {
     vertical-align: middle;
     display: inline-block;
 }
+hr{
+    border:0;
+    border-top:2px solid black;
+    margin-top:10px;
+    margin-bottom: 10px;
+}
 .heading img{
     max-width: 200px;
     max-height: 100px;
@@ -106,6 +112,7 @@ body {
 }
 #reg_btn{
     text-decoration: none;
+    font-size:19px;
 }
 
 
@@ -130,6 +137,9 @@ body {
   .main div p{
       font-size : 16px;
   }
+  #reg_btn{
+      font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 481px) and (max-width: 720px) {
@@ -144,5 +154,8 @@ body {
     }
     .main div p{
         font-size : 17px;
+    }
+    #reg_btn{
+        font-size: 17px;
     }
 }
