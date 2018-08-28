@@ -90,7 +90,7 @@ app.post('/send_params', function(req, res) {
                     .then(result => {
                         console.log("SECOND SELECT" +result.rowCount)
                         if(result.rowCount == 0){
-                            client.query("INSERT INTO users(user_id,full_name,email,phone_number,gender,college_name,college_code,team) values($1,$2,$3,$4,$5,$6,$7,$8),($9,$10,$11,$12,$13,$14,$15)",[user_id,full_name1,email1,phone_number1,gender1,college_name1,college_code1,team_id,user_id+1,full_name2,email2,phone_number2,gender2,college_name2,college_code2,team_id])
+                            client.query("INSERT INTO users(user_id,full_name,email,phone_number,gender,college_name,college_code,team) values($1,$2,$3,$4,$5,$6,$7,$8),($9,$10,$11,$12,$13,$14,$15,$16)",[user_id,full_name1,email1,phone_number1,gender1,college_name1,college_code1,team_id,user_id+1,full_name2,email2,phone_number2,gender2,college_name2,college_code2,team_id])
                             .then(result => {
                                 console.log("INSERT "+result.rowCount);
                                 console.log("Values " + user_id); 
