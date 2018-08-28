@@ -51,12 +51,12 @@ function logout()
       }
 }
 
-function authorize(emailList,passList){
+function authorize(emailList,passList,noOfUsers){
     return new Promise(function(resolve,reject){
         //var forms = document.getElementsByClassName('needs-validation');
         var i = 0;
         var final_result = [];
-        for(i;i<2;i++){
+        for(i;i<noOfUsers;i++){
             var authenticationData = {
                 Username : emailList[i],
                 Password : passList[i],
@@ -143,7 +143,7 @@ function authorize(emailList,passList){
             promise.then(function(result){
                //console.log(result);
                final_result.push(result);
-               if(final_result.length == 2)
+               if(final_result.length == noOfUsers)
                     resolve(final_result);
             },function(err){
                //console.log(err);
@@ -175,6 +175,7 @@ function authorize(emailList,passList){
         header.innerHTML = "Invalid email id";
         body.innerHTML = "Please provide an email id";
         $("#statusModal").modal('show');
+        return;
     }
     var userData = {
         Username : userName,
@@ -230,10 +231,10 @@ function authorize(emailList,passList){
             document.getElementById("prevBtn").style.display = "inline";
         }
         if (n == (x.length - 1)) {
-            document.getElementById("nextBtn").innerHTML = "Submit";
+            document.getElementById("nextBtn").style.display = "none";
         } 
         else {
-            document.getElementById("nextBtn").innerHTML = "Next";
+            document.getElementById("subBtn").style.display = "inline";
         }
         fixStepIndicator(n);
     }
@@ -272,6 +273,8 @@ function authorize(emailList,passList){
         
         currentTab = currentTab + n;
     
+        var noOfUsers = emailList.length;
+
         if (currentTab >= x.length) {
             //console.log(emailList);
             //console.log(passList);       
@@ -281,7 +284,7 @@ function authorize(emailList,passList){
             var buttons = modal.getElementsByClassName("modal-footer")[0];
             buttons.style.display = "block";
             hideAllElements();
-            authorize(emailList,passList).then(function(result){
+            authorize(emailList,passList,noOfUsers).then(function(result){
                 //console.log(result);
                 $.ajax({
                     url: "https://techno-riot.herokuapp.com/send_params",
