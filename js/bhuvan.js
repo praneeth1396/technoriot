@@ -333,7 +333,8 @@ function authorize(emailList,passList,noOfUsers){
     
     function hideAllElements(){
         document.getElementById("prevBtn").style.display = "none";
-        document.getElementById("nextBtn").style.display = "none";    
+        document.getElementById("nextBtn").style.display = "none";   
+        document.getElementById("subBtn").style.display = "none";
         document.getElementById("steps").style.display = "none";
         document.getElementById("reg").style.display = "none";
         document.getElementsByClassName("login100-form-title")[0].innerHTML = "Please wait ...";
