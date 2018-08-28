@@ -172,7 +172,9 @@ iframe {
   vertical-align: middle;
   text-align: center;
 }
-
+.left-div img{
+  max-width: 240px;
+}
 .left-div p{
   font-size: 40px;
   font-weight: bold;
@@ -201,6 +203,11 @@ iframe {
 }
 .right-div img{
   max-width: 240px;
+}
+.right-div p{
+  font-size:40px;
+  font-weight: bold;
+  color:black;
 }
 .login100-form {
   width: 100%;
