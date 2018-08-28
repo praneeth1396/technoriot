@@ -27,8 +27,8 @@ function toggleSection(e){
     e.currentTarget.style.backgroundColor = "red";
     
     var main = document.getElementsByClassName("main")[0];
-    var i = 7;
-    for(i;i<15;i+=2){
+    var i = 9;
+    for(i;i<17;i+=2){
         var child = main.childNodes[i];
         if(i != sectionId){
             child.style.display = "none";

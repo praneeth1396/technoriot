@@ -13,7 +13,7 @@
 <body onload="onLoad()";>
 
 	<header class="jumbotron" id="header">
-			<div class="heading"><h2> Techno-rIoT </h2> <img src="images/IOT.png" /> </div>
+			<div class="heading"> <img src="images/IOT.png" /> <h2> Techno-rIoT </h2> </div>
 		</header>
 	<div class="container-fluid">
 		<div class="row">
@@ -35,9 +35,9 @@
 				</span>
 				<hr>
 				<div class="btn-holder">
-					<a href="register.html" class="btn btn-success" id="reg_btn"> Register </a>
+					<a href="register.html" class="btn btn-success" id="reg_btn"> Register </a>				
+					<br>
 				</div>
-				<br>
 				<div id="about_section">
 					<p>
 					Try and visualize the numerous devices and appliances that we use on a daily basis. Some of them, like our smartphones, can do so much more than what their ancestors were first invented for. They've become pocket PCs, able to cater to almost all our personal needs. Some other devices, like the commonplace lighting systems and air-conditioners perform only a single purpose. Now, imagine them all being connected to each other through the internet. Imagine controlling all your home appliances on your smartphone, or controlling your car's settings using an app, or a farmer using an interface to command and monitor all his equipment. This "smart"  network of devices and things is what is envisioned as the <b>Internet of things (IOT)</b>. 
