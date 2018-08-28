@@ -23,7 +23,7 @@
 body {
   height: 100%;
   width: 100%;
-  font-family: Ubuntu-Regular, sans-serif;
+  font-family: monospace;
 }
 
 /*---------------------------------------------*/
@@ -160,7 +160,7 @@ iframe {
   align-items: center;
   padding: 15px;
   position: relative;
-  background: url("../images/sky.jpg") no-repeat;
+  background: url("../images/green.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }

@@ -3,14 +3,15 @@ html{
     width: 100%;
 }
 body {
-    font-family: "verdana";
+    font-family: "monospace";
+    color:#808080;
     position: relative;
 }
 body:before{
     height: 100%;
     width: 100%;
     background-color: white;
-    background: url("../images/sky.jpg") no-repeat;
+    background: url("../images/green.jpg") no-repeat;
     position: fixed;
     background-size: cover;
     will-change: transform;
