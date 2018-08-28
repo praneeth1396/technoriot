@@ -234,6 +234,7 @@ function authorize(emailList,passList,noOfUsers){
             document.getElementById("nextBtn").style.display = "none";
         } 
         else {
+            document.getElementById("nextBtn").style.display = "inline";
             document.getElementById("subBtn").style.display = "inline";
         }
         fixStepIndicator(n);
@@ -292,7 +293,8 @@ function authorize(emailList,passList,noOfUsers){
                     dataType: "text",   
                     crossDomain: true,
                     data: JSON.stringify({
-                        "finalResult":result
+                        "finalResult":result,
+                        "userSize":noOfUsers
                     }),
                     contentType: 'application/json',
                     success:function(data){
