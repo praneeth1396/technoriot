@@ -145,7 +145,7 @@ hr{
 @media screen and (min-width: 481px) and (max-width: 720px) {
     #sidebar {padding-top:10px;}
     #sidebar .list-group-item {padding-left: 0px; padding-right: 0px;}
-    #sidebar .list-group-item a {font-size: 19px; padding-left: 10px; padding-right: 10px;}
+    #sidebar .list-group-item a {font-size: 17px; padding-left: 10px; padding-right: 10px;}
     
   .main{
         border-image-width: 20px 20px 20px 20px;
