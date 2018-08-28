@@ -4,7 +4,7 @@ html{
 }
 body {
     font-family: "monospace";
-    color:#808080;
+    color:black;
     position: relative;
 }
 body:before{
@@ -65,7 +65,7 @@ body:before{
 }
 
 #sidebar .list-group-item a:hover {
-    background-color: gray;
+    background-color:aqua;
 }
 .main {
     margin-top: 20px;

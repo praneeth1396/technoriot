@@ -13,25 +13,25 @@
 <body onload="onLoad()";>
 
 	<header class="jumbotron" id="header">
-			<div class="heading"><h2> Techno-rIoT </h2> <img src="images/IOT1.png" /> </div>
+			<div class="heading"><h2> Techno-rIoT </h2> <img src="images/IOT.png" /> </div>
 		</header>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="sidenav col-md-3 col-xs-2 collapse in" id="sidebar">
 				<div class="list-group">
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#about_section" onclick="toggleSection(event);" data-id = "5"><i class="fas fa-info-circle"> <span class="hide_when_small"> Info</span> </i></a></li>
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#problem_section" onclick="toggleSection(event);" data-id = "7"><i class="fas fa-sticky-note"><span class="hide_when_small"> Problem Statement</span> </i></a></li>
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#rules_section" onclick="toggleSection(event);" data-id = "9"><i class="fas fa-book"> <span class="hide_when_small"> Rules</span> </i></a></li>
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#contact_section" onclick="toggleSection(event);" data-id = "11"><i class="fas fa-phone"> <span class="hide_when_small"> Contact</span> </i></a></li>		
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#about_section" onclick="toggleSection(event);" data-id = "7"><i class="fas fa-info-circle"> <span class="hide_when_small"> Info</span> </i></a></li>
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#problem_section" onclick="toggleSection(event);" data-id = "9"><i class="fas fa-sticky-note"><span class="hide_when_small"> Problem Statement</span> </i></a></li>
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#rules_section" onclick="toggleSection(event);" data-id = "11"><i class="fas fa-book"> <span class="hide_when_small"> Rules</span> </i></a></li>
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#contact_section" onclick="toggleSection(event);" data-id = "13"><i class="fas fa-phone"> <span class="hide_when_small"> Contact</span> </i></a></li>		
 				</div>
 			</div>
 			<div class="main col">
 				<span>
-					<a href="#sidebar" data-toggle="collapse" id="toggle_menu_btn"><i class="fas fa-bars fa-2x"></i></a>
-					<h3 id="info_h" style="color:white;"> Info </h3>
-					<h3 id="problem_h" style="color:white;"> Problem Statement </h3>
-					<h3 id="rules_h" style="color:white;"> Rules </h3>
-					<h3 id="contact_h" style="color:white;"> Contact </h3>
+					<a href="#sidebar" data-toggle="collapse" id="toggle_menu_btn"><i class="fas fa-bars fa-2x" style="color:black;"></i></a>
+					<h3 id="info_h" style="color:black;"> Info </h3>
+					<h3 id="problem_h" style="color:black;"> Problem Statement </h3>
+					<h3 id="rules_h" style="color:black;"> Rules </h3>
+					<h3 id="contact_h" style="color:black;"> Contact </h3>
 				</span>
 				<hr>
 				<div class="btn-holder">
