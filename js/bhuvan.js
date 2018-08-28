@@ -232,10 +232,12 @@ function authorize(emailList,passList,noOfUsers){
         }
         if (n == (x.length - 1)) {
             document.getElementById("nextBtn").style.display = "none";
+            document.getElementById("subBtn").innerHTML = "Register as team";
         } 
         else {
             document.getElementById("nextBtn").style.display = "inline";
             document.getElementById("subBtn").style.display = "inline";
+            document.getElementById("subBtn").innerHTML = "Register as single";
         }
         fixStepIndicator(n);
     }
