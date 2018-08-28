@@ -19,10 +19,10 @@
 		<div class="row">
 			<div class="sidenav col-md-3 col-xs-2 collapse in" id="sidebar">
 				<div class="list-group">
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#about_section" onclick="toggleSection(event);" data-id = "7"><i class="fas fa-info-circle"> <span class="hide_when_small"> Info</span> </i></a></li>
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#problem_section" onclick="toggleSection(event);" data-id = "9"><i class="fas fa-sticky-note"><span class="hide_when_small"> Problem Statement</span> </i></a></li>
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#rules_section" onclick="toggleSection(event);" data-id = "11"><i class="fas fa-book"> <span class="hide_when_small"> Rules</span> </i></a></li>
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#contact_section" onclick="toggleSection(event);" data-id = "13"><i class="fas fa-phone"> <span class="hide_when_small"> Contact</span> </i></a></li>		
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#about_section" onclick="toggleSection(event);" data-id = "9"><i class="fas fa-info-circle"> <span class="hide_when_small"> Info</span> </i></a></li>
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#problem_section" onclick="toggleSection(event);" data-id = "11"><i class="fas fa-sticky-note"><span class="hide_when_small"> Problem Statement</span> </i></a></li>
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#rules_section" onclick="toggleSection(event);" data-id = "13"><i class="fas fa-book"> <span class="hide_when_small"> Rules</span> </i></a></li>
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#contact_section" onclick="toggleSection(event);" data-id = "15"><i class="fas fa-phone"> <span class="hide_when_small"> Contact</span> </i></a></li>		
 				</div>
 			</div>
 			<div class="main col">
