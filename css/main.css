@@ -176,7 +176,7 @@ iframe {
 .left-div p{
   font-size: 40px;
   font-weight: bold;
-  color: gold;
+  color:#808080;
 }
 
 .wrap-login100 {
@@ -208,7 +208,7 @@ iframe {
 }
 
 .login100-form-title {
-  font-family: JosefinSans-Bold;
+  font-family: monospace;
   font-size: 30px;
   color: #fff;
   line-height: 1.2;
