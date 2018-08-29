@@ -237,7 +237,7 @@ function authorize(emailList,passList,noOfUsers){
         else {
             document.getElementById("nextBtn").style.display = "inline";
             document.getElementById("subBtn").style.display = "inline";
-            document.getElementById("subBtn").innerHTML = "Register as single";
+            document.getElementById("subBtn").innerHTML = "Register as single participant";
         }
         fixStepIndicator(n);
     }
