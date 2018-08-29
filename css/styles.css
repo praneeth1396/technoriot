@@ -16,6 +16,7 @@ body:before{
     background-size: cover;
     will-change: transform;
     z-index: -3;
+    opacity: 0.3;
     content : " ";
 }
 #header{
