@@ -49,7 +49,7 @@
 					<h3 id="contact_h" style="color:black;"> Contact </h3>
 				</span>
 				<hr>
-				<div id="content_section">
+				<div id="about_section">
 					<p>
 					Try and visualize the numerous devices and appliances that we use on a daily basis. Some of them, like our smartphones, can do so much more than what their ancestors were first invented for. They've become pocket PCs, able to cater to almost all our personal needs. Some other devices, like the commonplace lighting systems and air-conditioners perform only a single purpose. Now, imagine them all being connected to each other through the internet. Imagine controlling all your home appliances on your smartphone, or controlling your car's settings using an app, or a farmer using an interface to command and monitor all his equipment. This "smart"  network of devices and things is what is envisioned as the <b>Internet of Things (IoT)</b>. 
 					</p><br>
