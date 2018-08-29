@@ -1,5 +1,5 @@
 function onLoad(){
-    var firstLink = document.getElementsByTagName("a")[0];
+    var firstLink = document.getElementsByTagName("a")[1];
     firstLink.style.backgroundColor = "beige";
     var toggleBtn = document.getElementById("toggle_menu_btn");
     toggleBtn.style.display = "inline";
