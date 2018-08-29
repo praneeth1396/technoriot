@@ -152,8 +152,6 @@ iframe {
   content: " ";
   background: url("../images/green.jpg") no-repeat;
   background-size: cover;
-  will-change: transform;
-  z-index: -3;
   width: 100%;
   height: 100%;
   position: fixed;
