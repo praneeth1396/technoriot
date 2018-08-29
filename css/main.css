@@ -147,6 +147,17 @@ iframe {
   margin: 0 auto;
 }
 
+.container-login100:before{
+  opacity: 0.3;
+  content: " ";
+  background: url("../images/green.jpg") no-repeat;
+  background-size: cover;
+  will-change: transform;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
 .container-login100 {
   width: 100%;  
   min-height: 100vh;
@@ -160,10 +171,6 @@ iframe {
   align-items: center;
   padding: 15px;
   position: relative;
-  background: url("../images/green.jpg") no-repeat;
-  background-size: cover;
-  opacity:0.3;
-  background-attachment: fixed;
 }
 
 .left-div{
