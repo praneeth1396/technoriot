@@ -29,6 +29,7 @@ body:before{
 .heading{
     text-align: center;
 	max-height:250px;
+	position:relative;
 }
 .heading h2{
 	font-size: 40px;
