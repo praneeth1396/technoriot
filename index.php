@@ -23,16 +23,21 @@
 <body onload="onLoad()";>
 
 	<header class="jumbotron" id="header">
-			<div class="heading"> <img src="images/IOT.png" /> <h2> Techno-rIoT </h2> </div>
-		</header>
+			<div class="heading"> <img src="images/IOT.png" /> <h2> Techno-rIoT </h2> 
+				<div class="btn-holder">
+					<a href="register.html" class="btn btn-success" id="reg_btn"> Register </a>				
+					<br>
+				</div>
+			</div>				
+	</header>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="sidenav col-md-3 col-xs-2 collapse in" id="sidebar">
 				<div class="list-group">
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#about_section" onclick="toggleSection(event);" data-id = "7"><i class="fas fa-info-circle"> <span class="hide_when_small"> Info</span> </i></a></li>
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#problem_section" onclick="toggleSection(event);" data-id = "9"><i class="fas fa-sticky-note"><span class="hide_when_small"> Problem Statement</span> </i></a></li>
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#rules_section" onclick="toggleSection(event);" data-id = "11"><i class="fas fa-book"> <span class="hide_when_small"> Rules</span> </i></a></li>
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#contact_section" onclick="toggleSection(event);" data-id = "13"><i class="fas fa-phone"> <span class="hide_when_small"> Contact</span> </i></a></li>		
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#about_section" onclick="toggleSection(event);" data-id = "6"><i class="fas fa-info-circle"> <span class="hide_when_small"> Info</span> </i></a></li>
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#problem_section" onclick="toggleSection(event);" data-id = "8"><i class="fas fa-sticky-note"><span class="hide_when_small"> Problem Statement</span> </i></a></li>
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#rules_section" onclick="toggleSection(event);" data-id = "10"><i class="fas fa-book"> <span class="hide_when_small"> Rules</span> </i></a></li>
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#contact_section" onclick="toggleSection(event);" data-id = "12"><i class="fas fa-phone"> <span class="hide_when_small"> Contact</span> </i></a></li>		
 				</div>
 			</div>
 			<div class="main col">
@@ -44,13 +49,9 @@
 					<h3 id="contact_h" style="color:black;"> Contact </h3>
 				</span>
 				<hr>
-				<div class="btn-holder">
-					<a href="register.html" class="btn btn-success" id="reg_btn"> Register </a>				
-					<br>
-				</div>
 				<div id="about_section">
 					<p>
-					Try and visualize the numerous devices and appliances that we use on a daily basis. Some of them, like our smartphones, can do so much more than what their ancestors were first invented for. They've become pocket PCs, able to cater to almost all our personal needs. Some other devices, like the commonplace lighting systems and air-conditioners perform only a single purpose. Now, imagine them all being connected to each other through the internet. Imagine controlling all your home appliances on your smartphone, or controlling your car's settings using an app, or a farmer using an interface to command and monitor all his equipment. This "smart"  network of devices and things is what is envisioned as the <b>Internet of things (IOT)</b>. 
+					Try and visualize the numerous devices and appliances that we use on a daily basis. Some of them, like our smartphones, can do so much more than what their ancestors were first invented for. They've become pocket PCs, able to cater to almost all our personal needs. Some other devices, like the commonplace lighting systems and air-conditioners perform only a single purpose. Now, imagine them all being connected to each other through the internet. Imagine controlling all your home appliances on your smartphone, or controlling your car's settings using an app, or a farmer using an interface to command and monitor all his equipment. This "smart"  network of devices and things is what is envisioned as the <b>Internet of Things (IoT)</b>. 
 					</p><br>
 					<p>
 					IoT has seen tremendous growth over the years. As of 2017, the estimated number of IoT devices was above 8 billion. To have had such an impact and growth, this interconnected network of things should have brought quite a few advancements to the table. What benefits does connecting things provide? Why should things be "smart"? Making things smart also makes them efficient. An air-conditioner would be able to function to its full potential while also saving energy because it knows how many people are in the room and how much time it should spend in cooling the room. An irrigation equipment would optimise the amount of water needed for the crops while saving both energy and water. 
