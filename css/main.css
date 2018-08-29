@@ -162,6 +162,7 @@ iframe {
   position: relative;
   background: url("../images/green.jpg") no-repeat;
   background-size: cover;
+  opacity:0.3;
   background-attachment: fixed;
 }
 
