@@ -182,4 +182,12 @@ h3{
     #reg_btn{
         font-size: 17px;
     }
+	
+  .btn-holder{
+	  padding-left:20px;
+	  position:static;
+	  right:0%;
+	  top:0%;
+	  transform:translateY(0%);
+  }
 }
