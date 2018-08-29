@@ -25,8 +25,8 @@ function toggleSection(e){
     e.currentTarget.style.backgroundColor = "beige";
     
     var main = document.getElementsByClassName("main")[0];
-    var i = 6;
-    for(i;i<14;i+=2){
+    var i = 5;
+    for(i;i<13;i+=2){
         var child = main.childNodes[i];
         if(i != sectionId){
             child.style.display = "none";
@@ -50,5 +50,5 @@ function toggleSection(e){
             else
                 document.getElementById("contact_h").style.display = "inline";
         }
-    }
+    } 
 }
