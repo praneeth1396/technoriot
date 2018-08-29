@@ -5,7 +5,7 @@
 <title> Techno-rIoT </title>
 <link rel="icon" type="image/png" href="images/IOT.png"/>
 
-<link rel="stylesheet" href="/css/bootstrap.min.css.map">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 <link rel="stylesheet" href="css/styles.css">
 
