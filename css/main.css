@@ -466,3 +466,9 @@ input.invalid {
     padding-right: 15px;
   }
 }
+@media (max-width: 400px){
+	.navButtons button{
+		font-size: 13px;
+	}
+	
+}
