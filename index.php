@@ -34,10 +34,10 @@
 		<div class="row">
 			<div class="sidenav col-md-3 col-xs-2 collapse in" id="sidebar">
 				<div class="list-group">
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#about_section" onclick="toggleSection(event);" data-id = "6"><i class="fas fa-info-circle"> <span class="hide_when_small"> Info</span> </i></a></li>
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#problem_section" onclick="toggleSection(event);" data-id = "8"><i class="fas fa-sticky-note"><span class="hide_when_small"> Problem Statement</span> </i></a></li>
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#rules_section" onclick="toggleSection(event);" data-id = "10"><i class="fas fa-book"> <span class="hide_when_small"> Rules</span> </i></a></li>
-					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#contact_section" onclick="toggleSection(event);" data-id = "12"><i class="fas fa-phone"> <span class="hide_when_small"> Contact</span> </i></a></li>		
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#" onclick="toggleSection(event);" data-id = "5"><i class="fas fa-info-circle"> <span class="hide_when_small"> Info</span> </i></a></li>
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#" onclick="toggleSection(event);" data-id = "7"><i class="fas fa-sticky-note"><span class="hide_when_small"> Problem Statement</span> </i></a></li>
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#" onclick="toggleSection(event);" data-id = "9"><i class="fas fa-book"> <span class="hide_when_small"> Rules</span> </i></a></li>
+					<li class="list-group-item collapsed" data-parent="#sidebar"><a href="#" onclick="toggleSection(event);" data-id = "11"><i class="fas fa-phone"> <span class="hide_when_small"> Contact</span> </i></a></li>		
 				</div>
 			</div>
 			<div class="main col">
@@ -49,7 +49,7 @@
 					<h3 id="contact_h" style="color:black;"> Contact </h3>
 				</span>
 				<hr>
-				<div id="about_section">
+				<div id="content_section">
 					<p>
 					Try and visualize the numerous devices and appliances that we use on a daily basis. Some of them, like our smartphones, can do so much more than what their ancestors were first invented for. They've become pocket PCs, able to cater to almost all our personal needs. Some other devices, like the commonplace lighting systems and air-conditioners perform only a single purpose. Now, imagine them all being connected to each other through the internet. Imagine controlling all your home appliances on your smartphone, or controlling your car's settings using an app, or a farmer using an interface to command and monitor all his equipment. This "smart"  network of devices and things is what is envisioned as the <b>Internet of Things (IoT)</b>. 
 					</p><br>
