@@ -24,6 +24,11 @@ var path = require("path");
 
 const { Client } = require('pg');
 
+const client = new Client({
+    connectionString: process.env.DATABASE_URL,
+    ssl: true,
+});   
+
 var port = process.env.PORT || 8080;
 
 app.use(express.static(path.join(__dirname,"/..")));
@@ -34,10 +39,7 @@ app.all('/',function(req,res){
 
 app.post('/send_params', function(req, res) {
     //console.log(req.body.finalResult);    
-    const client = new Client({
-        connectionString: process.env.DATABASE_URL,
-        ssl: true,
-    });    
+     
     var user_id;
     var team_id;
     var same_team = 0;
