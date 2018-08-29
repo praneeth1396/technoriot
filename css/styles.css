@@ -130,10 +130,21 @@ h3{
 }
 
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 320px){
     .modal-footer{
         padding: 5px;
     }
+	#header{
+		height:310px;
+	}
+	
+	.btn-holder{
+	  padding-left:0px;
+	  position:static;
+	  right:0%;
+	  top:0%;
+	  transform:translateY(0%);
+	}
 }
 
 @media screen and (max-width: 480px) {
