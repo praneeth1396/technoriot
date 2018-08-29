@@ -12,8 +12,6 @@ function onLoad(){
     for(i; i< headers.length;i++){
         headers[i].style.display = "none";
     }
-    var firstButton = document.getElementsByClassName("btn-holder")[0];
-    firstButton.style.display = "block";
 }
 function toggleSection(e){
     var anchorTags = document.getElementsByTagName("a");
