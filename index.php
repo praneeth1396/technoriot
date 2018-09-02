@@ -84,7 +84,7 @@
 								We expect your team to cover the below mentioned milestones. All of these will add up to your final assesment, Problem statement will be released on 22-Aug-18 so try to complete each one for brownie points. <br>
 								<b> Jury's decision is final </b>
 							</p><br>
-							<p> <b> Round 1 </b> </p> <br>
+							<p> <b> <u> Round 1 </u> </b> </p> 
 						<p><u> Milestone 1: </u> (03-SEP-18) <br>
 								Share with us a PPT(max 5 slides) and Video(max 5 min) jointly covering these aspects: <br>
 									1. Introduce your team telling us everyone's role. <br>
@@ -104,7 +104,7 @@
 						2. Submit a video of the full working model with the required explanation (max 3 mins). <br>
 						3. Finally, provide us a PPT that you'll be using to present on the D day - Login (max 10 slides). <br>
 						</p>
-						<p> <b> Round 2 </b> </p>
+						<p> <b> <u> Round 2 </u> </b> </p>
 						<p>
 							Your team will have to give a presentation on the day of Login (29<sup>th</sup> September) at the venue along with a demo of your product. <br>
 						</p>
