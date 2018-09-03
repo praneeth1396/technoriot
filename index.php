@@ -117,7 +117,7 @@
 				</div>
 				<div id="contact_section">
 					<p>
-						Kishore (9655568122) 
+						Kishore <a href = "tel:9655568122"> 9655568122 </a>
 					</p>
 				</div>
 			</div>

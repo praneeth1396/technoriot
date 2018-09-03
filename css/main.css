@@ -475,7 +475,7 @@ input.invalid {
 }
 @media (max-width: 400px){
 	.navButtons button{
-		font-size: 12px;
+		font-size: 11px;
 	}
 	
 }
