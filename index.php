@@ -85,7 +85,7 @@
 								<b> Jury's decision is final </b>
 							</p><br>
 							<p> <b> <u> Round 1 </u> </b> </p> 
-						<p><u> Milestone 1: </u> (On or before 05-SEP-18) <br>
+						<p><u> Milestone 1: </u> (On or before 10-SEP-18) <br>
 								Share with us a PPT(max 5 slides) and Video(max 5 min) jointly covering these aspects: <br>
 									1. Introduce your team telling us everyone's role. <br>
 									2. Provide an overview of your idea describing your workflow. <br>
@@ -94,12 +94,12 @@
 									5. Estimate your expenditure for this product development and how much it'll earn if sold. <br>
 						</p>
 						<p>				
-						<u>Milestone 2:</u> (On or before 14-SEP-18) <br>
+						<u>Milestone 2:</u> (On or before 18-SEP-18) <br>
 						1. Update us with your progress and send us the wire frames and images or videos of your semi built application. <br>
 						2. You'll be contacted to inquire about your progress. <br>
 						</p>
 						<p>
-						<u>Milestone 3:</u> (On or before 22-SEP-18) <br>
+						<u>Milestone 3:</u> (On or before 25-SEP-18) <br>
 						1. Give us a link to your source code and the executables that we can use to assess your product. <br>
 						2. Submit a video of the full working model with the required explanation (max 3 mins). <br>
 						3. Finally, provide us a PPT that you'll be using to present on the D day - Login (max 10 slides). <br>
